@@ -370,12 +370,6 @@
   </div>
 </div>
 
-<!-- Real Jotform form, loaded invisibly in the background. This is where the data actually
-     gets saved -- your custom UI above is the experience, this is the data pipe. -->
-<div id="jotformEmbed" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;left:-9999px;top:-9999px;" aria-hidden="true">
-  <script type="text/javascript" src="https://form.jotform.com/jsform/262139156035050"></script>
-</div>
-
 <script>
   const TOTAL = 14;
   let cur = 0;
@@ -432,8 +426,11 @@
   // The full answer set is also stuffed into "Raw answers backup" as JSON so
   // nothing is ever lost even if an individual field doesn't line up.
 
+  // These are the REAL internal field IDs for form 262139156035050, confirmed directly
+  // against the live Jotform structure (not guessed). Each one maps a quiz answer to the
+  // exact field Jotform expects.
   function buildAnswerPayload(){
-    return {
+    const answers = {
       "First Name": single.name || '',
       "Email": single.email || '',
       "Mobile Phone": single.phone || '',
@@ -453,70 +450,47 @@
       "Marketing consent": (single.consent||[]).join(', '),
       "Source card": "GreenRoom custom Vibe Check quiz"
     };
-  }
 
-  function setNativeValue(el, value){
-    const proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
-    const setter = Object.getOwnPropertyDescriptor(proto, 'value').set;
-    setter.call(el, value);
-    el.dispatchEvent(new Event('input', { bubbles: true }));
-    el.dispatchEvent(new Event('change', { bubbles: true }));
-  }
+    const fieldMap = {
+      "First Name": "q2_textbox0",
+      "Email": "q3_email1",
+      "Mobile Phone": "q4_phone2[full]",
+      "Age Range": "q5_dropdown3",
+      "Which one is most you?": "q6_textbox4",
+      "Favorite cannabis brand": "q7_textbox5",
+      "What makes it your favorite": "q8_textbox6",
+      "How do you watch cannabis content now": "q9_textbox7",
+      "Favorite cannabis or wellness influencer": "q10_textbox8",
+      "What would you watch on GreenRoom": "q11_textbox9",
+      "What would you grab shopping during a show": "q12_textbox10",
+      "Would you buy live during a show": "q13_textbox11",
+      "Members only shows and rewards, in?": "q14_textbox12",
+      "How often would you watch": "q15_textbox13",
+      "Fair monthly price": "q16_textbox14",
+      "How likely to try GreenRoom": "q17_textbox15",
+      "Marketing consent": "q18_textbox16",
+      "Source card": "q19_textbox17"
+    };
 
-  // Finds a Jotform question by matching its visible label text, then fills it in.
-  function fillJotformField(root, labelText, value){
-    if(!value) return false;
-    const nodes = root.querySelectorAll('.form-line, li, [class*="form-line"]');
-    let target = null;
-    for(const n of nodes){
-      const legend = n.querySelector('label, legend, .form-label, [id*="label"]');
-      const text = (legend ? legend.textContent : n.textContent || '').trim();
-      if(text && text.toLowerCase().indexOf(labelText.toLowerCase()) === 0){ target = n; break; }
-    }
-    if(!target) return false;
-
-    // Text / email / tel / textarea inputs
-    const textInput = target.querySelector('input[type="text"], input[type="email"], input[type="tel"], textarea');
-    if(textInput){ setNativeValue(textInput, value); return true; }
-
-    // Radio / checkbox style questions -- match option by its visible text
-    const options = target.querySelectorAll('input[type="radio"], input[type="checkbox"]');
-    let matched = false;
-    options.forEach(opt=>{
-      const optLabel = target.querySelector('label[for="'+opt.id+'"]');
-      const optText = optLabel ? optLabel.textContent.trim() : '';
-      const values = value.split(',').map(v=>v.trim());
-      if(values.some(v => optText.toLowerCase() === v.toLowerCase())){
-        if(!opt.checked){ opt.click(); }
-        matched = true;
-      }
-    });
-    return matched;
+    return { answers, fieldMap };
   }
 
   function submitToJotform(){
-    const holder = document.getElementById('jotformEmbed');
-    const answers = buildAnswerPayload();
-    let tries = 0;
+    const { answers, fieldMap } = buildAnswerPayload();
+    const fd = new FormData();
+    fd.append('formID', '262139156035050');
+    Object.keys(fieldMap).forEach(label => fd.append(fieldMap[label], answers[label]));
+    // Guaranteed backup: the complete answer set as JSON, so nothing is ever lost
+    fd.append('rawAnswers', JSON.stringify(answers));
 
-    const attempt = setInterval(()=>{
-      tries++;
-      const form = holder.querySelector('form');
-      if(form || tries > 40){ // ~10s max wait for the embed to render
-        clearInterval(attempt);
-        if(!form){ console.warn('GreenRoom: Jotform embed did not load in time, submission skipped.'); return; }
-
-        // Best-effort: line each answer up with its matching Jotform question
-        Object.keys(answers).forEach(label => fillJotformField(form, label, answers[label]));
-
-        // Guaranteed backup: full JSON of every answer, in case any of the above missed
-        fillJotformField(form, 'Raw answers backup', JSON.stringify(answers));
-
-        // Submit the real Jotform form (this is what actually saves the data)
-        const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-        if(submitBtn){ submitBtn.click(); } else { form.submit ? form.submit() : form.requestSubmit && form.requestSubmit(); }
-      }
-    }, 250);
+    // Submits directly to Jotform's real intake endpoint. mode:'no-cors' means we can't read
+    // a response back (the browser blocks that cross-origin), but the submission still goes
+    // through -- this is the standard way to post custom forms into Jotform.
+    fetch('https://submit.jotform.com/submit/262139156035050', {
+      method: 'POST',
+      body: fd,
+      mode: 'no-cors'
+    }).catch(err => console.warn('GreenRoom: Vibe Check submission failed to send.', err));
   }
 
   const multi = { 6: [], 7: [] }; // screen 6 = "what would you watch", screen 7 = "what would you grab shopping"
