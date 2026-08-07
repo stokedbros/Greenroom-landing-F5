@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenRoom · 60 Second Vibe Check</title>
+<style>
+  :root{
+    --black:#07090a; --panel:#0d1012; --panel2:#12171a;
+    --gold:#c9a24b; --gold-hi:#eBD79a; --gold-deep:#8a6d2f;
+    --cream:#f2ead6; --dim:#9a9584; --line:rgba(201,162,75,.38);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+  body{ font-family:"Helvetica Neue",Arial,sans-serif; background:#000; color:var(--cream);
+        display:flex; align-items:center; justify-content:center; min-height:100vh; padding:16px; }
+  .serif{ font-family:"Didot","Bodoni MT",Georgia,"Times New Roman",serif; }
+  .phone{ width:392px; max-width:100%; height:812px; max-height:95vh; border-radius:40px;
+          border:10px solid #000; position:relative; overflow:hidden;
+          background:radial-gradient(120% 80% at 50% -10%, #14181b 0%, #0a0c0d 46%, #060708 100%);
+          box-shadow:0 40px 90px rgba(0,0,0,.7), inset 0 0 0 1px rgba(201,162,75,.22), inset 0 0 60px rgba(0,0,0,.6); }
+  .notch{ position:absolute; top:10px; left:50%; transform:translateX(-50%); width:118px; height:22px; background:#000; border-radius:14px; z-index:60; }
+
+  .smoke{ position:absolute; inset:0; z-index:0; overflow:hidden; }
+  .smoke b{ position:absolute; border-radius:50%; filter:blur(42px); opacity:.5; mix-blend-mode:screen; }
+  .s1{ width:320px; height:320px; left:-80px; top:120px; background:radial-gradient(circle,#1f7a4d55,transparent 70%); animation:drift1 26s ease-in-out infinite; }
+  .s2{ width:300px; height:300px; right:-90px; top:300px; background:radial-gradient(circle,#c9a24b40,transparent 70%); animation:drift2 32s ease-in-out infinite; }
+  .s3{ width:260px; height:260px; left:60px; bottom:-60px; background:radial-gradient(circle,#3a5a4a55,transparent 70%); animation:drift1 38s ease-in-out infinite reverse; }
+  @keyframes drift1{ 0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(30px,-40px) scale(1.15);} }
+  @keyframes drift2{ 0%,100%{transform:translate(0,0) scale(1.1);} 50%{transform:translate(-40px,30px) scale(1);} }
+  #sparkle{ position:absolute; inset:0; z-index:1; pointer-events:none; }
+  #confetti{ position:absolute; inset:0; z-index:80; pointer-events:none; display:none; }
+
+  .screen-wrap{ position:absolute; inset:0; z-index:10; display:flex; flex-direction:column; }
+  .topbar{ padding:34px 22px 10px; display:flex; align-items:center; gap:11px; }
+  .logo{ font-size:15px; letter-spacing:3px; font-weight:600; color:var(--cream); }
+  .logo b{ color:var(--gold); font-weight:700; }
+  .bar{ flex:1; height:1.5px; background:rgba(201,162,75,.2); position:relative; }
+  .bar > i{ position:absolute; left:0; top:0; height:100%; width:6%; background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi)); box-shadow:0 0 8px var(--gold); transition:width .4s ease; }
+  .timer{ font-size:10.5px; color:var(--gold); letter-spacing:1px; font-variant-numeric:tabular-nums; min-width:30px; text-align:right; }
+
+  .body{ flex:1; overflow-y:auto; padding:8px 22px 14px; }
+  .body::-webkit-scrollbar{ display:none; }
+  .screen{ display:none; }
+  .screen.active{ display:flex; flex-direction:column; min-height:100%; animation:rise .4s ease; }
+  @keyframes rise{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:none;} }
+
+  .kick{ font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin:8px 0 6px; }
+  h2{ font-size:25px; line-height:1.14; letter-spacing:.3px; color:var(--cream); font-weight:400; }
+  .sub{ color:var(--dim); font-size:12.5px; margin:4px 0 12px; }
+
+  /* competitive edge, pinned to the bottom of each question above the button */
+  .edge{ margin-top:auto; padding:11px 13px 3px; border-top:1px solid var(--line);
+         font-size:10.6px; font-weight:700; color:var(--gold-hi); letter-spacing:.2px; line-height:1.4; }
+  .edge .lab{ display:block; font-size:7.5px; letter-spacing:3.5px; color:var(--gold); margin-bottom:4px; }
+
+  .opts{ display:flex; flex-direction:column; gap:9px; margin-top:2px; }
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:2px; }
+  .opt{ background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:2px; padding:14px 16px; font-size:14.5px; color:var(--cream);
+        cursor:pointer; transition:.18s; letter-spacing:.3px; position:relative; }
+  .opt:active{ transform:scale(.985); }
+  .opt.sel{ border-color:var(--gold); background:linear-gradient(180deg,rgba(201,162,75,.14),rgba(201,162,75,.03)); box-shadow:0 0 18px rgba(201,162,75,.25), inset 0 0 0 1px var(--gold); color:var(--gold-hi); }
+  .opt.tile{ min-height:88px; display:flex; align-items:flex-end; overflow:hidden; padding:12px; }
+  .opt.tile .thumb{ position:absolute; inset:0; opacity:.5; z-index:0; }
+  .opt.tile span{ position:relative; z-index:2; font-size:13.5px; letter-spacing:.4px; }
+  .opt.tile .ph{ position:absolute; top:7px; right:8px; z-index:3; font-size:7.5px; color:#0a0f0c; background:var(--gold); padding:1px 6px; border-radius:2px; letter-spacing:.5px; }
+  .opt.tile.sel .thumb{ opacity:.7; }
+
+  .thumb{ background-size:220% 220%; animation:shift 8s ease infinite; }
+  @keyframes shift{ 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
+  .t-cannabis{ background-image:linear-gradient(120deg,#06170e,#1f7a4d,#0e3b23);} .t-sports{ background-image:linear-gradient(120deg,#1a1206,#8a5a1f,#2a1a05);}
+  .t-wellness{ background-image:linear-gradient(120deg,#06232a,#2f7a86,#08313a);} .t-creator{ background-image:linear-gradient(120deg,#1a0622,#5a2f80,#2a0836);}
+  .t-music{ background-image:linear-gradient(120deg,#26061a,#901760,#3a0820);} .t-comedy{ background-image:linear-gradient(120deg,#26210a,#9c8721,#3a3208);}
+  .t-biz{ background-image:linear-gradient(120deg,#06162a,#1f5a90,#08203a);} .t-fit{ background-image:linear-gradient(120deg,#062616,#1f9c5a,#083a1e);}
+  .t-live{ background-image:linear-gradient(120deg,#260606,#901f1f,#3a0808);} .t-film{ background-image:linear-gradient(120deg,#111120,#3a3a6a,#1a1a2a);}
+  .t-anim{ background-image:linear-gradient(120deg,#2a0620,#b02f7a,#7a2fb0,#2a0620);} .t-doc{ background-image:linear-gradient(120deg,#1a1a12,#6a6a4a,#2a2a1a);}
+
+  .chip-wrap{ display:flex; flex-wrap:wrap; gap:8px; margin-top:2px; }
+  .chip{ background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:2px; padding:10px 14px; font-size:13px; color:var(--cream); cursor:pointer; transition:.18s; letter-spacing:.3px; }
+  .chip:active{ transform:scale(.96); }
+  .chip.sel{ border-color:var(--gold); background:rgba(201,162,75,.14); color:var(--gold-hi); box-shadow:0 0 12px rgba(201,162,75,.25); }
+
+  .field{ width:100%; background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:2px; padding:14px 15px; font-size:15px; color:var(--cream); margin-bottom:9px; letter-spacing:.3px; }
+  .field::placeholder{ color:#6f6a5a; }
+  .toggle{ display:flex; align-items:center; justify-content:space-between; border:1px solid var(--line); border-radius:2px; padding:11px 15px; margin-bottom:8px; font-size:13px; color:var(--cream); }
+  .sw{ width:42px; height:24px; border-radius:20px; background:#26241c; position:relative; transition:.2s; flex:none; border:1px solid var(--line); }
+  .sw.on{ background:linear-gradient(90deg,var(--gold-deep),var(--gold)); }
+  .sw i{ position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%; background:var(--cream); transition:.2s; }
+  .sw.on i{ left:20px; }
+  .consent{ font-size:9.8px; color:#7a7566; line-height:1.45; margin:6px 2px 2px; }
+
+  .foot{ padding:10px 22px 24px; position:relative; z-index:10; }
+  .btn{ width:100%; background:linear-gradient(90deg,#a9832f,#e8cf8a 50%,#a9832f); color:#1a1204; border:none; border-radius:3px; padding:16px; font-size:14px; font-weight:700; cursor:pointer; letter-spacing:2px; text-transform:uppercase; box-shadow:0 6px 24px rgba(201,162,75,.3); }
+  .btn:active{ transform:scale(.99); }
+  .hint{ text-align:center; color:var(--dim); font-size:10.5px; margin-top:9px; letter-spacing:.5px; }
+
+  .center{ text-align:center; }
+  .hero{ height:200px; border-radius:3px; margin:14px 0 18px; position:relative; overflow:hidden; display:flex; align-items:flex-end; padding:16px; border:1px solid var(--line); }
+  .hero .ph{ position:absolute; top:10px; left:10px; z-index:3; font-size:8px; color:#0a0f0c; background:var(--gold); padding:2px 7px; border-radius:2px; letter-spacing:.5px; }
+  .hero .cap{ position:relative; z-index:2; font-size:12.5px; color:var(--cream); text-align:left; letter-spacing:.5px; }
+  .big{ font-size:33px; font-weight:400; letter-spacing:.5px; line-height:1.1; color:var(--cream); }
+  .rewardline{ border:1px solid var(--gold); border-radius:3px; padding:15px; margin:15px 0; background:linear-gradient(180deg,rgba(201,162,75,.1),transparent); }
+  .rewardline .amt{ font-size:29px; color:var(--gold-hi); letter-spacing:1px; }
+  .rewardline .raf{ font-size:12px; color:var(--dim); margin-top:6px; letter-spacing:.4px; }
+  .badge{ width:118px; height:118px; margin:6px auto 4px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; position:relative; background:radial-gradient(circle,rgba(201,162,75,.25),transparent 70%); overflow:hidden; }
+  .badge .lbl{ font-size:11px; letter-spacing:2px; color:var(--gold-hi); text-transform:uppercase; text-align:center; line-height:1.3; }
+  .badge .shine{ position:absolute; top:-60%; left:-60%; width:80%; height:220%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent); transform:rotate(25deg); animation:sweep 2.6s ease-in-out infinite; }
+  @keyframes sweep{ 0%{left:-70%;} 60%,100%{left:130%;} }
+  .socialrow{ display:flex; gap:8px; justify-content:center; margin:16px 0 4px; }
+  .socialrow div{ border:1px solid var(--line); border-radius:2px; padding:9px 12px; font-size:11px; letter-spacing:1px; color:var(--gold); }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="notch"></div>
+  <div class="smoke"><b class="s1"></b><b class="s2"></b><b class="s3"></b></div>
+  <canvas id="sparkle"></canvas>
+  <canvas id="confetti"></canvas>
+
+  <div class="screen-wrap">
+    <div class="topbar">
+      <div class="logo">GREEN<b>ROOM</b></div>
+      <div class="bar"><i id="prog"></i></div>
+      <div class="timer" id="timer">0:60</div>
+    </div>
+
+    <div class="body">
+
+      <!-- 0 SPLASH -->
+      <div class="screen active" data-s="0">
+        <div class="center">
+          <div class="kick">Streaming · Live Shopping · Culture</div>
+          <div class="hero t-cannabis thumb">
+            <div class="ph">your GreenRoom hero reel</div>
+            <div class="cap serif" style="font-size:15px;">Watch it. Trust it. Own it.<br><span style="font-size:11px;color:var(--gold-hi);letter-spacing:2px;">SPORTS · CANNABIS · MUSIC · CREATORS</span></div>
+          </div>
+          <div class="big serif">The 60 Second<br>Vibe Check</div>
+          <div class="rewardline">
+            <div>Finish and receive a</div>
+            <div class="amt serif">$10 GreenRoom Credit</div>
+            <div class="raf">plus an entry to win a $150 gift card</div>
+          </div>
+          <p class="sub" style="text-align:center;">Tap through. Tell us what you love. That is it.</p>
+        </div>
+      </div>
+
+      <!-- 1 SEGMENT -->
+      <div class="screen" data-s="1">
+        <div class="kick">Who are you</div>
+        <h2 class="serif">Which one is<br>most you?</h2>
+        <div class="grid" data-single>
+          <div class="opt tile" onclick="pick(this,1)"><div class="thumb t-cannabis"></div><div class="ph">img</div><span>Cannabis lover</span></div>
+          <div class="opt tile" onclick="pick(this,1)"><div class="thumb t-sports"></div><div class="ph">img</div><span>Sports fan</span></div>
+          <div class="opt tile" onclick="pick(this,1)"><div class="thumb t-wellness"></div><div class="ph">img</div><span>Wellness seeker</span></div>
+          <div class="opt tile" onclick="pick(this,1)"><div class="thumb t-creator"></div><div class="ph">img</div><span>Creator culture</span></div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Built by real athletes, creators, and filmmakers. Not an algorithm.</div>
+      </div>
+
+      <!-- 2 FAV BRAND -->
+      <div class="screen" data-s="2">
+        <div class="kick">Real talk</div>
+        <h2 class="serif">Favorite cannabis brand?</h2>
+        <div class="chip-wrap" data-single>
+          <div class="chip" onclick="pick(this,2)">STIIIZY</div><div class="chip" onclick="pick(this,2)">Jeeter</div>
+          <div class="chip" onclick="pick(this,2)">Wyld</div><div class="chip" onclick="pick(this,2)">Cookies</div>
+          <div class="chip" onclick="pick(this,2)">Raw</div><div class="chip" onclick="pick(this,2)">Cann</div>
+          <div class="chip" onclick="pick(this,2)">Kiva</div><div class="chip" onclick="pick(this,2)">Wana</div>
+          <div class="chip" onclick="pick(this,2)">Select</div><div class="chip" onclick="pick(this,2)">Rythm</div>
+          <div class="chip" onclick="pick(this,2)">Cresco</div><div class="chip" onclick="pick(this,2)">710 Labs</div>
+          <div class="chip" onclick="pick(this,2)">Alien Labs</div><div class="chip" onclick="pick(this,2)">Jungle Boys</div>
+          <div class="chip" onclick="pick(this,2)">Connected</div><div class="chip" onclick="pick(this,2)">Papa &amp; Barkley</div>
+          <div class="chip" onclick="pick(this,2)">Other</div><div class="chip" onclick="pick(this,2)">None</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Only GreenRoom turns the brands you love into live, shoppable moments.</div>
+      </div>
+
+      <!-- 3 WHY BRAND -->
+      <div class="screen" data-s="3">
+        <div class="kick">And why them</div>
+        <h2 class="serif">What makes it your favorite?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,3)">The flavor</div>
+          <div class="opt" onclick="pick(this,3)">The potency</div>
+          <div class="opt" onclick="pick(this,3)">The price</div>
+          <div class="opt" onclick="pick(this,3)">Always consistent</div>
+          <div class="opt" onclick="pick(this,3)">The vibe and the brand</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>See it, tap it, own it. Live shopping no other streamer offers.</div>
+      </div>
+
+      <!-- 4 HOW WATCH -->
+      <div class="screen" data-s="4">
+        <div class="kick">Your habits</div>
+        <h2 class="serif">How do you watch cannabis content now?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,4)">YouTube vlogs</div>
+          <div class="opt" onclick="pick(this,4)">TikTok and Reels</div>
+          <div class="opt" onclick="pick(this,4)">Twitch and live</div>
+          <div class="opt" onclick="pick(this,4)">Podcasts</div>
+          <div class="opt" onclick="pick(this,4)">Movies</div>
+          <div class="opt" onclick="pick(this,4)">TV</div>
+          <div class="opt" onclick="pick(this,4)">I do not yet</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Creators, movies, and TV in one home made for 21+.</div>
+      </div>
+
+      <!-- 5 FAVORITE INFLUENCER (NEW) -->
+      <div class="screen" data-s="5">
+        <div class="kick">Your people</div>
+        <h2 class="serif">Favorite cannabis or wellness influencer?</h2>
+        <div class="chip-wrap" data-single>
+          <div class="chip" onclick="pick(this,5)">Snoop Dogg</div><div class="chip" onclick="pick(this,5)">Wiz Khalifa</div>
+          <div class="chip" onclick="pick(this,5)">Berner</div><div class="chip" onclick="pick(this,5)">B Real</div>
+          <div class="chip" onclick="pick(this,5)">Seth Rogen</div><div class="chip" onclick="pick(this,5)">Mike Tyson</div>
+          <div class="chip" onclick="pick(this,5)">Tommy Chong</div><div class="chip" onclick="pick(this,5)">Ricky Williams</div>
+          <div class="chip" onclick="pick(this,5)">Steve DeAngelo</div><div class="chip" onclick="pick(this,5)">Montel Williams</div>
+          <div class="chip" onclick="pick(this,5)">Emily Kyle</div><div class="chip" onclick="pick(this,5)">imcannabess</div>
+          <div class="chip" onclick="pick(this,5)">Koala Puffs</div><div class="chip" onclick="pick(this,5)">MacDizzle</div>
+          <div class="chip" onclick="pick(this,5)">Andrea Drummer</div><div class="chip" onclick="pick(this,5)">Other</div>
+          <div class="chip" onclick="pick(this,5)">None</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>We partner directly with your favorite creators to make shows, not ads.</div>
+      </div>
+
+      <!-- 6 WHAT WATCH multi -->
+      <div class="screen" data-s="6">
+        <div class="kick">Pick a few</div>
+        <h2 class="serif">What would you watch on GreenRoom?</h2>
+        <div class="grid" data-multi>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-anim"></div><div class="ph">img</div><span>Adult Animations</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-doc"></div><div class="ph">img</div><span>Documentaries</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-sports"></div><div class="ph">img</div><span>Sports</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-cannabis"></div><div class="ph">img</div><span>Cannabis culture</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-comedy"></div><div class="ph">img</div><span>Comedy</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-music"></div><div class="ph">img</div><span>Music</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-creator"></div><div class="ph">img</div><span>Creators</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-biz"></div><div class="ph">img</div><span>Business</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-fit"></div><div class="ph">img</div><span>Fitness</span></div>
+          <div class="opt tile" onclick="tog(this)"><div class="thumb t-live"></div><div class="ph">img</div><span>Live events</span></div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Our own adult animated cannabis originals you will not stream anywhere else.</div>
+      </div>
+
+      <!-- 7 SHOP multi -->
+      <div class="screen" data-s="7">
+        <div class="kick">Live shopping</div>
+        <h2 class="serif">Shopping during a show, what would you grab?</h2>
+        <div class="chip-wrap" data-multi>
+          <div class="chip" onclick="tog(this)">$1 items</div>
+          <div class="chip" onclick="tog(this)">Accessories</div>
+          <div class="chip" onclick="tog(this)">Sneakers and apparel</div>
+          <div class="chip" onclick="tog(this)">Merch</div>
+          <div class="chip" onclick="tog(this)">Health and wellness</div>
+          <div class="chip" onclick="tog(this)">Drinks and food</div>
+          <div class="chip" onclick="tog(this)">Collectibles</div>
+          <div class="chip" onclick="tog(this)">Tickets and experiences</div>
+          <div class="chip" onclick="tog(this)">Nothing</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Shop the show as you watch. Commerce the majors cannot match.</div>
+      </div>
+
+      <!-- 8 BUY LIVE -->
+      <div class="screen" data-s="8">
+        <div class="kick">Be honest</div>
+        <h2 class="serif">Would you actually buy live during a TV, movie, or show?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,8)">Absolutely</div>
+          <div class="opt" onclick="pick(this,8)">Maybe, if it is good</div>
+          <div class="opt" onclick="pick(this,8)">No, just watching</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Exclusive drops from a network of over 2,000 athletes and celebrities.</div>
+      </div>
+
+      <!-- 9 MEMBERSHIP -->
+      <div class="screen" data-s="9">
+        <div class="kick">Founding club</div>
+        <h2 class="serif">Members only shows, drops, and rewards. In?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,9)">I am in</div>
+          <div class="opt" onclick="pick(this,9)">Maybe</div>
+          <div class="opt" onclick="pick(this,9)">Not for me</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>Founding members earn real rewards and shape the shows we make.</div>
+      </div>
+
+      <!-- 10 FREQUENCY -->
+      <div class="screen" data-s="10">
+        <div class="kick">Your rhythm</div>
+        <h2 class="serif">How often would you watch?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,10)">Every day</div>
+          <div class="opt" onclick="pick(this,10)">A few times a week</div>
+          <div class="opt" onclick="pick(this,10)">Once a week</div>
+          <div class="opt" onclick="pick(this,10)">Now and then</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>New drops, live events, and creators give you a reason to return daily.</div>
+      </div>
+
+      <!-- 11 PRICE -->
+      <div class="screen" data-s="11">
+        <div class="kick">Pricing</div>
+        <h2 class="serif">What feels fair per month?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,11)">$1.99</div>
+          <div class="opt" onclick="pick(this,11)">$4.99</div>
+          <div class="opt" onclick="pick(this,11)">$9.99</div>
+          <div class="opt" onclick="pick(this,11)">$14.99</div>
+          <div class="opt" onclick="pick(this,11)">$19.99 or more</div>
+          <div class="opt" onclick="pick(this,11)">Only with a free tier</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>One membership. Streaming, shopping, rewards, and community together.</div>
+      </div>
+
+      <!-- 12 INTENT -->
+      <div class="screen" data-s="12">
+        <div class="kick">Last one</div>
+        <h2 class="serif">How likely are you to try GreenRoom?</h2>
+        <div class="opts" data-single>
+          <div class="opt" onclick="pick(this,12)">Not yet</div>
+          <div class="opt" onclick="pick(this,12)">Curious</div>
+          <div class="opt" onclick="pick(this,12)">Interested</div>
+          <div class="opt" onclick="pick(this,12)">Excited</div>
+          <div class="opt" onclick="pick(this,12)">All in</div>
+        </div>
+        <div class="edge"><span class="lab">WHY GREENROOM</span>A real film slate and a real product line. Not just another library.</div>
+      </div>
+
+      <!-- 13 CAPTURE -->
+      <div class="screen" data-s="13">
+        <div class="kick">You are in</div>
+        <h2 class="serif">Claim your $10 credit</h2>
+        <p class="sub">Join the Founding Members list. Ten seconds.</p>
+        <input class="field" placeholder="First name" />
+        <input class="field" placeholder="Email" type="email" />
+        <input class="field" placeholder="Mobile (optional, for launch texts)" type="tel" />
+        <div class="chip-wrap" style="margin:2px 0 12px;" data-single>
+          <div class="chip" onclick="pick(this,'age')">21 to 27</div>
+          <div class="chip" onclick="pick(this,'age')">28 to 34</div>
+          <div class="chip" onclick="pick(this,'age')">35 to 44</div>
+          <div class="chip" onclick="pick(this,'age')">45 plus</div>
+        </div>
+        <div class="toggle">Launch updates <div class="sw on" onclick="this.classList.toggle('on')"><i></i></div></div>
+        <div class="toggle">Early beta access <div class="sw on" onclick="this.classList.toggle('on')"><i></i></div></div>
+        <div class="toggle">Exclusive launch offers <div class="sw on" onclick="this.classList.toggle('on')"><i></i></div></div>
+        <p class="consent">By joining you confirm you are 21 or older and agree to receive email and SMS from GreenRoom. Msg and data rates may apply. Reply STOP to opt out. We never sell your information.</p>
+      </div>
+
+      <!-- 14 REWARD -->
+      <div class="screen" data-s="14">
+        <div class="center">
+          <div class="badge"><div class="shine"></div><div class="lbl serif" style="font-size:13px;">GreenRoom<br>Founding<br>Member</div></div>
+          <div class="big serif" style="font-size:27px;">Welcome to the<br>Loyalty Program</div>
+          <div class="rewardline">
+            <div>Your reward is locked</div>
+            <div class="amt serif">$10 Credit</div>
+            <div class="raf">Redeem in app after launch. You are entered to win the $150 gift card.</div>
+          </div>
+          <p class="sub" style="text-align:center;">Skip the launch line. Share GreenRoom with two friends.</p>
+          <div class="socialrow"><div>INSTAGRAM</div><div>TIKTOK</div><div>SHARE</div></div>
+          <p class="hint">Follow @GreenRoomTV for first look drops.</p>
+        </div>
+      </div>
+
+    </div><!-- /body -->
+
+    <div class="foot">
+      <button class="btn" id="cta" onclick="next()">Begin</button>
+      <div class="hint" id="subhint">Under 60 seconds</div>
+    </div>
+  </div>
+</div>
+
+<!-- Real Jotform form, loaded invisibly in the background. This is where the data actually
+     gets saved -- your custom UI above is the experience, this is the data pipe. -->
+<div id="jotformEmbed" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;left:-9999px;top:-9999px;" aria-hidden="true">
+  <script type="text/javascript" src="https://form.jotform.com/jsform/262139156035050"></script>
+</div>
+
+<script>
+  const TOTAL = 14;
+  let cur = 0;
+  const single = {};
+  const prog = document.getElementById('prog');
+  const cta = document.getElementById('cta');
+  const timerEl = document.getElementById('timer');
+  const subhint = document.getElementById('subhint');
+
+  let t = 60, ticking = false;
+  function startTimer(){ if(ticking) return; ticking = true;
+    const iv = setInterval(()=>{ t--; if(t<0){ clearInterval(iv); timerEl.textContent="done"; return; }
+      timerEl.textContent = "0:"+String(t).padStart(2,'0'); }, 1000); }
+
+  function show(i){
+    document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+    document.querySelector('.screen[data-s="'+i+'"]').classList.add('active');
+    prog.style.width = Math.max(6, Math.round((i/TOTAL)*100)) + '%';
+    if(i===0){ cta.textContent="Begin"; subhint.textContent="Under 60 seconds"; }
+    else if(i===13){ cta.textContent="Claim my $10 credit"; subhint.textContent="Your reward unlocks next"; }
+    else if(i===14){ cta.textContent="Explore GreenRoom"; subhint.textContent=""; }
+    else { cta.textContent="Continue"; subhint.textContent=""; }
+    document.querySelector('.body').scrollTop = 0;
+  }
+
+  function next(){
+    if(cur===0) startTimer();
+    if(cur===13){
+      captureContactFields();
+      fireConfetti();
+      submitToJotform(); // fire-and-forget: real submission happens invisibly in the background
+    }
+    if(cur < TOTAL){ cur++; show(cur); }
+    else { cur=0; t=60; ticking=false; timerEl.textContent="0:60"; show(0); }
+  }
+
+  function captureContactFields(){
+    const cap = document.querySelector('.screen[data-s="13"]');
+    const inputs = cap.querySelectorAll('.field');
+    single.name  = inputs[0] ? inputs[0].value.trim() : '';
+    single.email = inputs[1] ? inputs[1].value.trim() : '';
+    single.phone = inputs[2] ? inputs[2].value.trim() : '';
+    const toggles = cap.querySelectorAll('.toggle .sw');
+    single.consent = [];
+    cap.querySelectorAll('.toggle').forEach((row,i)=>{
+      const label = row.firstChild.textContent.trim();
+      if(toggles[i] && toggles[i].classList.contains('on')) single.consent.push(label);
+    });
+  }
+
+  // --- Jotform sync -------------------------------------------------
+  // Sends every quiz answer into the hidden real Jotform form and submits it,
+  // so responses land in your Jotform account exactly like a normal submission.
+  // The full answer set is also stuffed into "Raw answers backup" as JSON so
+  // nothing is ever lost even if an individual field doesn't line up.
+
+  function buildAnswerPayload(){
+    return {
+      "First Name": single.name || '',
+      "Email": single.email || '',
+      "Mobile Phone": single.phone || '',
+      "Age Range": single.age || '',
+      "Which one is most you?": single[1] || '',
+      "Favorite cannabis brand": single[2] || '',
+      "What makes it your favorite": single[3] || '',
+      "How do you watch cannabis content now": single[4] || '',
+      "Favorite cannabis or wellness influencer": single[5] || '',
+      "What would you watch on GreenRoom": (multi[6]||[]).join(', '),
+      "What would you grab shopping during a show": (multi[7]||[]).join(', '),
+      "Would you buy live during a show": single[8] || '',
+      "Members only shows and rewards, in?": single[9] || '',
+      "How often would you watch": single[10] || '',
+      "Fair monthly price": single[11] || '',
+      "How likely to try GreenRoom": single[12] || '',
+      "Marketing consent": (single.consent||[]).join(', '),
+      "Source card": "GreenRoom custom Vibe Check quiz"
+    };
+  }
+
+  function setNativeValue(el, value){
+    const proto = el.tagName === 'TEXTAREA' ? window.HTMLTextAreaElement.prototype : window.HTMLInputElement.prototype;
+    const setter = Object.getOwnPropertyDescriptor(proto, 'value').set;
+    setter.call(el, value);
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  // Finds a Jotform question by matching its visible label text, then fills it in.
+  function fillJotformField(root, labelText, value){
+    if(!value) return false;
+    const nodes = root.querySelectorAll('.form-line, li, [class*="form-line"]');
+    let target = null;
+    for(const n of nodes){
+      const legend = n.querySelector('label, legend, .form-label, [id*="label"]');
+      const text = (legend ? legend.textContent : n.textContent || '').trim();
+      if(text && text.toLowerCase().indexOf(labelText.toLowerCase()) === 0){ target = n; break; }
+    }
+    if(!target) return false;
+
+    // Text / email / tel / textarea inputs
+    const textInput = target.querySelector('input[type="text"], input[type="email"], input[type="tel"], textarea');
+    if(textInput){ setNativeValue(textInput, value); return true; }
+
+    // Radio / checkbox style questions -- match option by its visible text
+    const options = target.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+    let matched = false;
+    options.forEach(opt=>{
+      const optLabel = target.querySelector('label[for="'+opt.id+'"]');
+      const optText = optLabel ? optLabel.textContent.trim() : '';
+      const values = value.split(',').map(v=>v.trim());
+      if(values.some(v => optText.toLowerCase() === v.toLowerCase())){
+        if(!opt.checked){ opt.click(); }
+        matched = true;
+      }
+    });
+    return matched;
+  }
+
+  function submitToJotform(){
+    const holder = document.getElementById('jotformEmbed');
+    const answers = buildAnswerPayload();
+    let tries = 0;
+
+    const attempt = setInterval(()=>{
+      tries++;
+      const form = holder.querySelector('form');
+      if(form || tries > 40){ // ~10s max wait for the embed to render
+        clearInterval(attempt);
+        if(!form){ console.warn('GreenRoom: Jotform embed did not load in time, submission skipped.'); return; }
+
+        // Best-effort: line each answer up with its matching Jotform question
+        Object.keys(answers).forEach(label => fillJotformField(form, label, answers[label]));
+
+        // Guaranteed backup: full JSON of every answer, in case any of the above missed
+        fillJotformField(form, 'Raw answers backup', JSON.stringify(answers));
+
+        // Submit the real Jotform form (this is what actually saves the data)
+        const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+        if(submitBtn){ submitBtn.click(); } else { form.submit ? form.submit() : form.requestSubmit && form.requestSubmit(); }
+      }
+    }, 250);
+  }
+
+  const multi = { 6: [], 7: [] }; // screen 6 = "what would you watch", screen 7 = "what would you grab shopping"
+
+  function pick(el,q){
+    const parent = el.closest('[data-single]');
+    parent.querySelectorAll('.sel').forEach(n=>n.classList.remove('sel'));
+    el.classList.add('sel');
+    single[q]=el.textContent.trim();
+    if(typeof q==='number'){ setTimeout(next,240); }
+  }
+  function tog(el){
+    el.classList.toggle('sel');
+    const label = el.querySelector('span') ? el.querySelector('span').textContent.trim() : el.textContent.trim();
+    const bucket = el.closest('[data-s="6"]') ? multi[6] : multi[7];
+    const idx = bucket.indexOf(label);
+    if(el.classList.contains('sel')){ if(idx===-1) bucket.push(label); }
+    else { if(idx!==-1) bucket.splice(idx,1); }
+  }
+
+  const sc = document.getElementById('sparkle'), sx = sc.getContext('2d');
+  function sizeCanvas(c){ const r=c.parentElement.getBoundingClientRect(); c.width=r.width; c.height=r.height; }
+  sizeCanvas(sc);
+  const stars = Array.from({length:46},()=>({ x:Math.random(), y:Math.random(), r:Math.random()*1.4+.3, p:Math.random()*6.28, sp:Math.random()*.03+.008 }));
+  function drawStars(){ sx.clearRect(0,0,sc.width,sc.height);
+    for(const s of stars){ s.p+=s.sp; const a=(Math.sin(s.p)+1)/2*0.8;
+      sx.beginPath(); sx.arc(s.x*sc.width, s.y*sc.height, s.r, 0, 6.28);
+      sx.fillStyle='rgba(232,207,138,'+a.toFixed(2)+')'; sx.shadowBlur=6; sx.shadowColor='rgba(201,162,75,.8)'; sx.fill(); }
+    requestAnimationFrame(drawStars); }
+  drawStars();
+
+  const cc = document.getElementById('confetti'), cx = cc.getContext('2d');
+  let parts=[], confTimer=0;
+  function fireConfetti(){
+    sizeCanvas(cc); cc.style.display='block';
+    const colors=['#e8cf8a','#c9a24b','#f2ead6','#8a6d2f','#ffffff'];
+    parts=[]; for(let i=0;i<160;i++){ parts.push({
+      x:cc.width/2+(Math.random()-.5)*80, y:cc.height*0.42,
+      vx:(Math.random()-.5)*9, vy:Math.random()*-11-4,
+      g:0.28+Math.random()*0.12, s:Math.random()*6+3, rot:Math.random()*6.28, vr:(Math.random()-.5)*.3,
+      c:colors[(Math.random()*colors.length)|0], life:0 }); }
+    confTimer=0; runConfetti();
+  }
+  function runConfetti(){
+    cx.clearRect(0,0,cc.width,cc.height); let alive=false;
+    for(const p of parts){ p.vy+=p.g; p.x+=p.vx; p.y+=p.vy; p.rot+=p.vr; p.life++;
+      if(p.y<cc.height+20){ alive=true; }
+      cx.save(); cx.translate(p.x,p.y); cx.rotate(p.rot); cx.fillStyle=p.c; cx.globalAlpha=Math.max(0,1-p.life/150);
+      cx.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.5); cx.restore(); }
+    confTimer++;
+    if(alive && confTimer<170){ requestAnimationFrame(runConfetti); } else { cc.style.display='none'; }
+  }
+</script>
+</body>
+</html>
