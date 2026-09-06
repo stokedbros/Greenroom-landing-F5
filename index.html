@@ -1,1159 +1,1082 @@
-<!DOCTYPE html>
-<html lang="en" data-path="">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Greenroom Network | Wellness Entertainment, Live Shopping and Recovery</title>
-<meta name="description" content="The Greenroom Network is a wellness entertainment network. Streaming shows, live shopping, athlete recovery and community in one room. Founding class of 1,000 now open. Doors open Winter 2026.">
-<link rel="canonical" href="https://www.thegreenroomnetwork.com/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greenroom TV | Welcome to the room behind the room. Opening November 25, 2026</title>
+<meta name="description" content="Greenroom TV opens November 25, 2026. Reserve a founding seat free and watch on day one. The Green Guild is $1.99 once, and unlocks both publications, the founding rate for life, and member drops.">
+<meta name="keywords" content="Greenroom TV, wellness entertainment, wellness streaming, shoppable entertainment, live shopping, founding member, cannabis wellness report">
+<link rel="canonical" href="https://thegreenroomnetwork.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Greenroom Network">
-<meta property="og:description" content="Watch it. Trust it. Own it. Streaming, live shopping, recovery and community in one room. Founding class of 1,000 now open.">
-<meta property="og:url" content="https://www.thegreenroomnetwork.com/">
-<meta property="og:image" content="https://www.thegreenroomnetwork.com/assets/watch.jpg">
+<meta property="og:site_name" content="Greenroom TV">
+<meta property="og:title" content="Welcome to the room behind the room.">
+<meta property="og:description" content="Opening November 25, 2026. Free to watch on day one. $1.99 holds your founding rate for life.">
+<meta property="og:image" content="https://thegreenroomnetwork.com/assets/stage.jpg">
+<meta property="og:url" content="https://thegreenroomnetwork.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#060b08">
+<meta name="twitter:title" content="Welcome to the room behind the room.">
+<meta name="twitter:description" content="Free to watch on day one. $1.99 holds your founding rate for life.">
+<meta name="twitter:image" content="https://thegreenroomnetwork.com/assets/stage.jpg">
+<meta name="theme-color" content="#06120c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://js.stripe.com/v3/"></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"Organization","name":"The Greenroom Network","url":"https://www.thegreenroomnetwork.com/","slogan":"Watch it. Trust it. Own it.","description":"A wellness entertainment network combining streaming, live shopping, athlete recovery and community."},
-{"@type":"WebSite","name":"The Greenroom Network","url":"https://www.thegreenroomnetwork.com/"},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is the Greenroom Network?","acceptedAnswer":{"@type":"Answer","text":"A wellness entertainment network. Streaming shows, live shopping, recovery content and community in one room. Sports, culture, comedy and plant wellness for grown folks, side by side."}},
-{"@type":"Question","name":"When does the Greenroom Network launch?","acceptedAnswer":{"@type":"Answer","text":"Winter 2026. Founding members get in first, with previews and live tapings before the public doors open."}},
-{"@type":"Question","name":"What does the $1.99 founding reservation include?","acceptedAnswer":{"@type":"Answer","text":"Your first month free when the doors open, a founding rate for life below every public price, your name on the Founding Wall and first access to drops and live tapings. The $1.99 is refundable any time before launch, and if you keep your seat it is credited to your first paid month after the free one."}},
-{"@type":"Question","name":"What is the difference between the free list and a founding seat?","acceptedAnswer":{"@type":"Answer","text":"The free list gets the launch letter, previews and first looks. A founding seat adds the first month free, the rate lock for life, the Founding Wall and first access to drops and tapings."}},
-{"@type":"Question","name":"Do you sell cannabis on this site?","acceptedAnswer":{"@type":"Answer","text":"No. This site sells nothing but a seat. Live drops feature legal goods only. Plant wellness content sits in a 21 and over lane."}},
-{"@type":"Question","name":"How does live shopping work?","acceptedAnswer":{"@type":"Answer","text":"You watch the show. A product appears on screen. You tap it and it is yours. Products come from the people who make the shows, with member deals on live drops."}}
-]}]}
+{"@context":"https://schema.org","@type":"Event","name":"Greenroom TV Network Launch","startDate":"2026-11-25T00:00:00-05:00","eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"VirtualLocation","url":"https://thegreenroomnetwork.com/"},"organizer":{"@type":"Organization","name":"Greenroom Network LLC"},"description":"Greenroom TV, a wellness entertainment and shoppable streaming network, opens November 25, 2026.","offers":[{"@type":"Offer","name":"Founding Seat","price":"0","priceCurrency":"USD","url":"https://thegreenroomnetwork.com/#seat"},{"@type":"Offer","name":"The Green Guild","price":"1.99","priceCurrency":"USD","url":"https://thegreenroomnetwork.com/#guild"}]}
 </script>
 <style>
 :root{
-  --bg:#060b08; --bg2:#08110c; --panel:#0b1410; --panel2:#101b14;
-  --gold:#c9a24b; --gold-hi:#ebd79a; --gold-deep:#8a6d2f;
-  --cream:#f2ead6; --dim:#93a094; --faint:#5f6c60;
-  --line:rgba(201,162,75,.32); --hair:rgba(201,162,75,.16);
-  --rust:#b4552d; --accent:#c9a24b;
-  --serif:"Didot","Bodoni MT","Bodoni 72",Georgia,"Times New Roman",serif;
-  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ink:#06120c;--ink2:#0a1a12;--ink3:#0f2419;
+  --cream:#f3efe4;--cream2:#d9d3c2;--mute:#8fa596;
+  --green:#3fd06a;--green2:#1f8f45;--gold:#d8b45c;--red:#ff4d3d;
+  --font:'Bricolage Grotesque',system-ui,sans-serif;--serif:'Instrument Serif',Georgia,serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-html[data-motion="off"]{scroll-behavior:auto}
-body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--ink);color:var(--cream);font-family:var(--font);line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
-a{color:var(--gold-hi)}
-button{font-family:var(--sans)}
-.serif{font-family:var(--serif);font-weight:400}
-::selection{background:rgba(201,162,75,.35)}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1160px,92vw);margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green)}
+.eyebrow.gold{color:var(--gold)}
+h1,h2,h3{font-weight:700;letter-spacing:-.025em;line-height:.92}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);text-transform:uppercase}
+.lede{font-size:clamp(1.02rem,1.5vw,1.2rem);color:var(--cream2);font-weight:300}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:1.05rem 1.8rem;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .2s,box-shadow .2s,background .2s;min-height:54px;white-space:nowrap;text-align:center}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--green);color:#03150a}
+.btn-primary:hover{background:#5ae282;box-shadow:0 14px 44px -12px rgba(63,208,106,.75);transform:translateY(-2px)}
+.btn-ghost{border:1px solid rgba(243,239,228,.28);color:var(--cream);backdrop-filter:blur(8px);background:rgba(6,18,12,.35)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-gold{background:linear-gradient(135deg,#e6c46b,#b8912f);color:#1a1200}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 44px -12px rgba(216,180,92,.7)}
+.btn .tag{font-family:var(--mono);font-weight:500;font-size:.72rem;padding:.2rem .5rem;border-radius:6px;background:rgba(0,0,0,.18)}
+.btn.lg{padding:1.15rem 2.1rem;font-size:1.02rem;min-height:60px}
+.g{color:var(--green)}.gd{color:var(--gold)}
+.ic{width:14px;height:14px;flex:none;vertical-align:-2px}
 
-/* editorial frame */
-.frame{position:fixed;inset:12px;border:1px solid var(--hair);pointer-events:none;z-index:90}
-.frame i{position:absolute;width:14px;height:14px;border-color:var(--gold);border-style:solid}
-.frame i:nth-child(1){top:-1px;left:-1px;border-width:1.5px 0 0 1.5px}
-.frame i:nth-child(2){top:-1px;right:-1px;border-width:1.5px 1.5px 0 0}
-.frame i:nth-child(3){bottom:-1px;left:-1px;border-width:0 0 1.5px 1.5px}
-.frame i:nth-child(4){bottom:-1px;right:-1px;border-width:0 1.5px 1.5px 0}
-.spine{position:fixed;top:50%;z-index:90;font-size:9px;letter-spacing:4px;color:var(--faint);text-transform:uppercase;pointer-events:none;white-space:nowrap}
-.spine.l{left:22px;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl}
-.spine.r{right:22px;transform:translateY(-50%);writing-mode:vertical-rl}
-@media(max-width:900px){.frame,.spine{display:none}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:.8rem 0;transition:background .3s}
+nav.scrolled{background:rgba(6,18,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+nav .brand img{height:42px;width:auto}
+nav .date{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--cream2);display:inline-flex;align-items:center;gap:.45rem}
+nav .date i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite}
+nav .cta{display:flex;gap:.6rem;align-items:center}
+nav .btn{padding:.65rem 1.15rem;min-height:44px;font-size:.82rem}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,77,61,.7)}70%{box-shadow:0 0 0 9px rgba(255,77,61,0)}100%{box-shadow:0 0 0 0 rgba(255,77,61,0)}}
+@media(max-width:640px){nav .brand img{height:34px}nav .btn-ghost{display:none}nav .date span{display:none}}
 
-/* top bar */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;gap:22px;padding:20px 34px 12px;background:linear-gradient(180deg,rgba(6,11,8,.92),rgba(6,11,8,0));backdrop-filter:blur(2px)}
-.wordmark{font-size:15px;letter-spacing:6px;font-weight:700;color:var(--cream);text-decoration:none}
-.wordmark b{color:var(--gold);font-weight:700}
-.topnav{display:flex;gap:20px;margin-left:auto}
-.topnav a{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .2s}
-.topnav a:hover{color:var(--gold-hi)}
-.livechip{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:6px 12px;font-size:9.5px;letter-spacing:2.5px;color:var(--gold-hi);text-decoration:none;text-transform:uppercase;background:rgba(6,11,8,.5)}
-.livechip s{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84;animation:pulse 2s infinite;text-decoration:none}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-@media(max-width:900px){.topnav{display:none}.topbar{padding:16px 18px 10px}}
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;overflow:hidden;isolation:isolate;padding:6rem 0 3rem}
+.hero .bg{position:absolute;inset:-6%;background:var(--ink3) url(assets/stage.jpg) center 42%/cover no-repeat;z-index:-2;animation:dolly 24s ease-in-out infinite alternate}
+@keyframes dolly{from{transform:scale(1.02)}to{transform:scale(1.1) translateY(-1.5%)}}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,18,12,.86) 0%,rgba(6,18,12,.54) 42%,rgba(6,18,12,.76) 72%,rgba(6,18,12,.97) 100%),radial-gradient(65% 55% at 50% 40%,rgba(63,208,106,.14),transparent 72%)}
+.hero .grain{position:absolute;inset:0;z-index:-1;opacity:.09;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .inner{position:relative;display:grid;gap:1.15rem;justify-items:center;max-width:900px}
+.hero .kick{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream2);border:1px solid rgba(255,255,255,.14);padding:.5rem 1rem;border-radius:999px;background:rgba(6,18,12,.4)}
+.hero .kick b{color:var(--green);font-weight:500}
+.hero .setup{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,2rem);color:var(--cream2);line-height:1;opacity:.9}
+.hero h1{font-size:clamp(2.1rem,5.8vw,4.7rem);text-transform:uppercase;line-height:.94;margin-top:-.1em}
+.hero .say{font-size:clamp(1rem,1.9vw,1.26rem);color:var(--cream);font-weight:300;max-width:40ch}
+.hero .say b{font-weight:700}
+.cd-wrap{display:grid;gap:.7rem;justify-items:center;margin:.1rem 0 .2rem}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.4rem,1.4vw,1rem)}
+.countdown .unit{position:relative;padding:clamp(.65rem,1.6vw,1.1rem) clamp(.4rem,1.5vw,1.3rem);border:1px solid rgba(216,180,92,.22);border-radius:16px;background:rgba(6,18,12,.5);backdrop-filter:blur(14px);text-align:center;overflow:hidden;min-width:clamp(64px,17vw,140px)}
+.countdown .unit:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.07),transparent 46%);pointer-events:none}
+.countdown .num{font-size:clamp(2.2rem,8.4vw,5.2rem);font-weight:800;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums;color:var(--cream);transition:transform .25s,color .25s}
+.countdown .num.flip{transform:translateY(-4px) scale(1.04);color:var(--green)}
+.countdown .lbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--green);margin-top:.4rem}
+.hero .actions{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
 
-/* ticker */
-.tickerbar{position:fixed;bottom:0;left:0;right:0;z-index:80;background:#050907;border-top:1px solid var(--hair);overflow:hidden;height:34px;display:flex;align-items:center}
-.ticker{display:flex;white-space:nowrap;animation:tick 46s linear infinite}
-html[data-motion="off"] .ticker{animation:none}
-.ticker span{font-size:9.5px;letter-spacing:3px;color:var(--dim);text-transform:uppercase;padding:0 26px;position:relative}
-.ticker span::after{content:"";position:absolute;right:-3px;top:50%;width:5px;height:5px;background:var(--gold);transform:translateY(-50%) rotate(45deg);opacity:.5}
-.ticker span.g{color:var(--gold-hi)}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* atmosphere */
-.atmo{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.atmo b{position:absolute;border-radius:50%;filter:blur(60px);opacity:.42;mix-blend-mode:screen}
-.a1{width:52vw;height:52vw;left:-16vw;top:-8vw;background:radial-gradient(circle,#14523255,transparent 70%);animation:drift1 34s ease-in-out infinite}
-.a2{width:44vw;height:44vw;right:-14vw;top:30vh;background:radial-gradient(circle,#c9a24b2e,transparent 70%);animation:drift2 42s ease-in-out infinite}
-.a3{width:40vw;height:40vw;left:8vw;bottom:-14vw;background:radial-gradient(circle,#1d3a2a66,transparent 70%);animation:drift1 50s ease-in-out infinite reverse}
-html[data-motion="off"] .atmo b{animation:none}
-@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(3vw,-4vh) scale(1.12)}}
-@keyframes drift2{0%,100%{transform:translate(0,0) scale(1.08)}50%{transform:translate(-4vw,3vh) scale(1)}}
-.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
-#sparkle{position:fixed;inset:0;z-index:1;pointer-events:none}
+.trustrow{display:flex;gap:.4rem .9rem;flex-wrap:wrap;justify-content:center;align-items:center;font-family:var(--mono);font-size:.59rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.trustrow span{display:inline-flex;align-items:center;gap:.35rem}
+.trustrow svg{stroke:var(--green);opacity:.85}
+.backed{display:flex;gap:.5rem 1.4rem;flex-wrap:wrap;justify-content:center;font-family:var(--mono);font-size:.61rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream2)}
+.backed b{color:var(--gold);font-weight:500}
+.backed i{width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block;margin-right:.45rem;vertical-align:middle}
 
-main{position:relative;z-index:5}
-section{position:relative}
-.wrap{max-width:1180px;margin:0 auto;padding:0 34px}
-@media(max-width:900px){.wrap{padding:0 20px}}
+.paychips{display:flex;gap:.32rem;flex-wrap:wrap;justify-content:center;align-items:center}
+.chip{height:25px;min-width:40px;padding:0 .42rem;border-radius:5px;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:.58rem;letter-spacing:-.02em;color:#1a1f36;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.chip.visa{color:#1434cb;font-style:italic;font-size:.7rem}
+.chip.amex{background:#016fd0;color:#fff;font-size:.53rem}
+.chip.disc{color:#e6772e;font-size:.5rem}
+.chip.mc{gap:0;padding:0 .5rem}
+.chip.mc i{width:13px;height:13px;border-radius:50%;display:block}
+.chip.mc i:first-child{background:#eb001b}
+.chip.mc i:last-child{background:#f79e1b;margin-left:-5px;mix-blend-mode:multiply}
+.chip.apay{background:#000;color:#fff;font-size:.55rem}
+.chip.gpay{color:#5f6368;font-size:.55rem}
+.chip.pp{color:#003087;font-size:.55rem}
+.chip.link{background:#00d66f;color:#011e0f;font-size:.55rem}
+.chip.cash{background:#00d54b;color:#fff;font-size:.5rem}
 
-.kick{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px}
-.kick::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.6vw,54px);line-height:1.06;letter-spacing:.3px;margin:14px 0 10px}
-h2 em{font-style:italic;color:var(--gold-hi)}
-.lede{color:var(--dim);font-size:15.5px;max-width:560px}
+.band{position:relative;min-height:76svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.band .bg{position:absolute;inset:0;background:var(--ink3) url(assets/livingroom.jpg) center/cover no-repeat;z-index:-2}
+.band .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,18,12,.85),rgba(6,18,12,.15) 40%,rgba(6,18,12,.92))}
+.band .inner{padding:clamp(3rem,8vw,7rem) 0;display:grid;gap:1.1rem;max-width:640px}
+.band .actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream2);border:1px solid rgba(63,208,106,.4);padding:.45rem .9rem;border-radius:999px;width:fit-content;background:rgba(6,18,12,.4)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(90deg,#a9832f,#e8cf8a 50%,#a9832f);color:#1a1204;border:none;padding:16px 30px;font-size:12.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;text-decoration:none;box-shadow:0 8px 28px rgba(201,162,75,.28);transition:transform .15s, box-shadow .2s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(201,162,75,.4)}
-.btn.ghost{background:transparent;color:var(--gold-hi);border:1px solid var(--line);box-shadow:none}
-.btn.ghost:hover{border-color:var(--gold);box-shadow:0 0 18px rgba(201,162,75,.18)}
-.btn.sm{padding:12px 20px;font-size:11px}
-.micro{font-size:11px;color:#8f9c8f;letter-spacing:.6px;margin-top:12px}
-.micro a{color:var(--gold-hi)}
-.offerstrip{display:inline-block;margin-top:22px;border:1px solid var(--line);background:rgba(201,162,75,.07);padding:11px 18px;font-size:12px;color:var(--cream);text-decoration:none;letter-spacing:.4px}
-.offerstrip b{color:var(--gold-hi);font-weight:600}
-.offerstrip:hover{border-color:var(--gold)}
-.herocap{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px;max-width:520px}
-.herofield{flex:1;min-width:230px;margin:0;background:rgba(6,11,8,.65);border:1px solid var(--line);font-size:16px}
-.herofield:focus{border-color:var(--gold)}
-.vibelink{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:#b9f2d4;text-decoration:none;letter-spacing:.4px;padding:12px 18px;border:1px solid rgba(61,220,132,.45);background:rgba(61,220,132,.08);box-shadow:0 0 18px rgba(61,220,132,.12)}
-.vibelink::before{content:"";width:8px;height:8px;border-radius:50%;background:#3ddc84;box-shadow:0 0 10px #3ddc84;animation:pulse 2s infinite}
-.vibelink:hover{border-color:#3ddc84;color:#e8fff2}
-/* survey side box, chat style */
-.vibebox{position:fixed;right:22px;bottom:96px;z-index:84;width:290px;background:linear-gradient(180deg,#0c1712,#081009);border:1px solid rgba(61,220,132,.5);box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 26px rgba(61,220,132,.12);padding:18px;transform:translateY(24px);opacity:0;pointer-events:none;transition:all .5s ease}
-.vibebox.on{transform:none;opacity:1;pointer-events:auto}
-.vibebox .vk{display:flex;align-items:center;gap:8px;font-size:9px;letter-spacing:3px;color:#3ddc84;text-transform:uppercase;margin-bottom:8px}
-.vibebox .vk s{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 9px #3ddc84;animation:pulse 2s infinite;text-decoration:none}
-.vibebox p{font-size:13px;color:var(--cream);line-height:1.5;margin-bottom:12px}
-.vibebox p b{color:#b9f2d4}
-.vibebox a.go{display:block;text-align:center;background:linear-gradient(90deg,#1f7a4d,#3ddc84 55%,#1f7a4d);color:#05130a;font-weight:700;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;padding:13px}
-.vibebox .vx{position:absolute;top:8px;right:11px;background:none;border:none;color:#5f6c60;font-size:16px;cursor:pointer}
-@media(max-width:760px){.vibebox{right:12px;left:12px;width:auto;bottom:86px}}
-a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.err{display:none;font-size:11.5px;color:#e08a63;margin:2px 0 8px}
-.err.on{display:block}
+.capture{padding:clamp(3.5rem,7vw,6rem) 0;background:linear-gradient(180deg,var(--ink),var(--ink2))}
+.capture .card{max-width:760px;margin:0 auto;text-align:center;padding:clamp(1.8rem,4vw,3rem);border:1px solid rgba(63,208,106,.24);border-radius:28px;background:radial-gradient(120% 130% at 50% 0%,rgba(63,208,106,.12),transparent 55%),var(--ink3)}
+.capture p{color:var(--cream2);margin:.7rem auto 1.3rem;max-width:46ch;font-weight:300}
+form.email{display:flex;gap:.6rem;max-width:520px;margin:0 auto}
+form.email input{flex:1;min-width:0;height:56px;border-radius:999px;border:1px solid rgba(243,239,228,.2);background:rgba(6,18,12,.7);color:var(--cream);padding:0 1.3rem;font:inherit;font-size:1rem}
+form.email input:focus{outline:2px solid var(--green);outline-offset:1px}
+.fine{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--mute);margin-top:.9rem}
+.capture .done{display:none}
+.capture .card.ok form.email,.capture .card.ok .fine,.capture .card.ok .pre{display:none}
+.capture .card.ok .done{display:block}
+.done h3{font-size:clamp(1.6rem,4vw,2.4rem);text-transform:uppercase}
+.done p{margin:.5rem auto 1.1rem}
+.done .row{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center}
+.done .row .btn{min-height:46px;padding:.7rem 1.2rem;font-size:.85rem}
+@media(max-width:560px){form.email{flex-direction:column}}
 
-/* GATE */
-#gate{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 90px;overflow:hidden}
-.depth{position:absolute;inset:-5%;transform-style:preserve-3d;animation:dolly 2.4s cubic-bezier(.2,.7,.2,1) both}
-@keyframes dolly{from{transform:scale(1.16);opacity:0}to{transform:scale(1);opacity:1}}
-html[data-motion="off"] .depth{animation:none}
-.dl{position:absolute;inset:0;will-change:transform}
-#gate .bgimg{background:url("assets/worlds.jpg") center 30%/cover no-repeat;opacity:.2;-webkit-mask-image:radial-gradient(90% 80% at 50% 45%,#000 30%,transparent 78%);mask-image:radial-gradient(90% 80% at 50% 45%,#000 30%,transparent 78%)}
-.dl.mid{background:radial-gradient(60% 50% at 62% 40%,rgba(61,220,132,.10),transparent 70%),radial-gradient(45% 40% at 30% 60%,rgba(201,162,75,.12),transparent 70%)}
-.dl.near{background:radial-gradient(120% 90% at 50% 118%,rgba(4,8,5,.92) 30%,transparent 62%),radial-gradient(140% 120% at 50% 50%,transparent 62%,rgba(4,8,5,.8) 96%)}
-.cine1{animation:rise2 1s .5s cubic-bezier(.2,.7,.2,1) both}
-.cine2{animation:rise2 1s .85s cubic-bezier(.2,.7,.2,1) both}
-.cine3{animation:rise2 1s 1.15s cubic-bezier(.2,.7,.2,1) both}
-@keyframes rise2{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
-html[data-motion="off"] .cine1,html[data-motion="off"] .cine2,html[data-motion="off"] .cine3{animation:none}
-#gate .wrap{position:relative}
-.gate-net{font-size:11px;letter-spacing:6px;color:var(--dim);text-transform:uppercase;margin:18px 0 8px}
-.gate-h{font-family:var(--serif);font-weight:400;font-size:clamp(52px,9.6vw,132px);line-height:.98;letter-spacing:.5px}
-.gate-h .row2{display:block;margin-left:clamp(20px,8vw,150px);color:var(--gold-hi);font-style:italic}
-.gate-sub{color:var(--dim);font-size:16px;max-width:520px;margin:26px 0 30px}
-.gate-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.timecode{position:absolute;top:96px;right:34px;font-size:10px;letter-spacing:2px;color:var(--faint);font-variant-numeric:tabular-nums}
-.scrollcue{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:4px;color:var(--faint);text-transform:uppercase;animation:cue 2.6s ease-in-out infinite}
-html[data-motion="off"] .scrollcue{animation:none}
-@keyframes cue{0%,100%{transform:translate(-50%,0);opacity:.6}50%{transform:translate(-50%,8px);opacity:1}}
-@media(max-width:900px){.timecode{display:none}#gate{padding-top:90px}}
+.locked{padding:clamp(3rem,6vw,5rem) 0;background:var(--ink2)}
+.locked .head{text-align:center;max-width:680px;margin:0 auto 2.2rem}
+.locked p{color:var(--cream2);margin-top:.7rem;font-weight:300}
+.vault{display:grid;grid-template-columns:repeat(6,1fr);gap:.7rem}
+.vault .cell{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:radial-gradient(120% 120% at 30% 20%,rgba(31,143,69,.18),transparent 60%),#050d09;display:grid;place-items:center;transition:transform .3s,border-color .3s}
+.vault .cell:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 2px,transparent 2px 5px);opacity:.5;pointer-events:none}
+.vault .cell:hover{transform:translateY(-4px);border-color:var(--gold)}
+.vault .cell .lock{width:32px;height:32px;opacity:.7}
+.vault .cell .cat{position:absolute;bottom:.5rem;left:0;right:0;text-align:center;font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.vault .cell .q{position:absolute;top:50%;left:50%;transform:translate(-50%,-58%);font-family:var(--serif);font-style:italic;font-size:2rem;color:rgba(216,180,92,.5)}
+.vault .cell .day{position:absolute;top:.5rem;right:.5rem;font-family:var(--mono);font-size:.5rem;color:var(--gold);border:1px solid rgba(216,180,92,.4);padding:.15rem .35rem;border-radius:5px}
+.locked .foot{text-align:center;margin-top:2rem}
+@media(max-width:900px){.vault{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:520px){.vault{grid-template-columns:repeat(3,1fr);gap:.5rem}}
 
-/* IDENTITY */
-#doors{padding:90px 0 40px}
-.doorgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
-.door{position:relative;border:1px solid var(--hair);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));padding:26px 20px 22px;cursor:pointer;text-align:left;color:var(--cream);transition:border-color .2s, background .2s, transform .15s;min-height:150px;display:flex;flex-direction:column;gap:8px}
-.door:hover{transform:translateY(-2px);border-color:var(--line)}
-.door .no{font-size:9px;letter-spacing:3px;color:var(--faint)}
-.door .nm{font-family:var(--serif);font-size:24px;letter-spacing:.5px}
-.door .tag{font-size:12px;color:var(--dim);line-height:1.4}
-.door.sel{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,162,75,.13),rgba(201,162,75,.02));box-shadow:0 0 24px rgba(201,162,75,.18)}
-.door.sel .nm{color:var(--gold-hi)}
-.door-note{margin-top:16px;font-size:12.5px;color:var(--gold-hi);letter-spacing:.4px;min-height:18px}
-@media(max-width:900px){.doorgrid{grid-template-columns:1fr 1fr}}
+.index{border-top:1px solid rgba(255,255,255,.1)}
+.irow{border-bottom:1px solid rgba(255,255,255,.1)}
+.ihead{width:100%;display:grid;grid-template-columns:1fr auto;gap:1.4rem;align-items:center;padding:clamp(1.5rem,3.4vw,2.4rem) 0;text-align:left;transition:background .3s}
+.ihead:hover{background:rgba(63,208,106,.05)}
+.ihead .ttl h2{font-size:clamp(1.5rem,3.2vw,2.4rem)}
+.ihead .ttl .sub{color:var(--cream2);font-weight:300;font-size:clamp(.95rem,1.5vw,1.12rem);margin-top:.4rem;max-width:60ch}
+.ihead .op{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;color:var(--mute);display:flex;align-items:center;gap:.7rem;white-space:nowrap}
+.ihead .op b{width:34px;height:34px;border-radius:50%;border:1px solid rgba(216,180,92,.5);display:grid;place-items:center;color:var(--gold);font-weight:400;font-size:1.1rem;transition:transform .35s}
+.irow.open .ihead .op b{transform:rotate(45deg)}
+.ipanel{width:100vw;margin-left:calc(50% - 50vw);max-height:0;overflow:hidden;transition:max-height .55s cubic-bezier(.4,0,.2,1);background:linear-gradient(180deg,var(--ink3),var(--ink))}
+.irow.open .ipanel{max-height:1600px}
+.ipanel .in{width:min(1160px,92vw);margin:0 auto;padding:clamp(2rem,4vw,3.4rem) 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:center}
+.ipanel .shot{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:var(--ink3)}
+.ipanel .shot:after{content:"";position:absolute;inset:0;border-radius:18px;border:1px solid rgba(216,180,92,.25);pointer-events:none}
+.ipanel .shot img{width:100%;height:100%;object-fit:cover}
+.ipanel ul{display:grid;gap:.5rem;color:var(--cream2);font-weight:300;margin-top:.9rem}
+.ipanel li{list-style:none;display:flex;gap:.7rem;align-items:baseline}
+.ipanel li:before{content:"";width:16px;height:1px;background:var(--gold);flex:none;transform:translateY(-4px)}
+@media(max-width:800px){.ipanel .in{grid-template-columns:1fr}.ihead{gap:.9rem}.ihead .op span{display:none}}
 
-/* WORLDS */
-#worlds{padding:60px 0 30px}
-.world{border-top:1px solid var(--hair);padding:54px 0}
-.world .head{display:grid;grid-template-columns:100px 1fr 380px;gap:30px;align-items:start}
-.world .idx{font-family:var(--serif);font-size:64px;color:transparent;-webkit-text-stroke:1px var(--line);line-height:1}
-.world h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,42px);line-height:1.1;letter-spacing:.3px}
-.world h3 em{font-style:italic;color:var(--gold-hi)}
-.world .wl{color:var(--dim);font-size:14.5px;margin-top:10px;max-width:520px}
-.world .lanechip{display:inline-block;margin-top:12px;font-size:9px;letter-spacing:2.5px;color:var(--gold);border:1px solid var(--hair);padding:4px 9px;text-transform:uppercase}
-.plate{position:relative;border:1px solid var(--hair);overflow:hidden;aspect-ratio:16/10;background:var(--panel)}
-.plate img{width:100%;height:100%;object-fit:cover;filter:saturate(.92);transition:transform .6s ease}
-.world:hover .plate img{transform:scale(1.03)}
-html[data-motion="off"] .plate img{transition:none}
-.plate .ph{position:absolute;top:10px;left:10px;font-size:8px;letter-spacing:2px;color:#0a0f0c;background:var(--gold);padding:2px 8px;text-transform:uppercase}
-.openbtn{margin-top:18px;background:none;border:1px solid var(--line);color:var(--gold-hi);padding:12px 22px;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:border-color .2s, background .2s}
-.openbtn:hover{border-color:var(--gold);background:rgba(201,162,75,.07)}
-.reveal{max-height:0;overflow:hidden;transition:max-height .55s ease}
-.reveal-in{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:20px;padding:30px 0 6px;align-items:start}
-.rv h4{font-size:9.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
-.rv p{font-size:13px;color:var(--dim);line-height:1.5}
-.rv .cta-col{align-self:center}
-.world.yours .idx{color:var(--gold);-webkit-text-stroke:0}
-.world .yours-tag{display:none;font-size:9px;letter-spacing:3px;color:#0a0f0c;background:var(--gold);padding:3px 9px;text-transform:uppercase;margin-bottom:10px}
-.world.yours .yours-tag{display:inline-block}
-@media(max-width:1000px){.world .head{grid-template-columns:1fr}.world .idx{font-size:40px}.plate{max-width:560px}.reveal-in{grid-template-columns:1fr 1fr;gap:18px}}
+.library{padding:clamp(3.5rem,7vw,6.5rem) 0;background:linear-gradient(180deg,var(--ink2),#0b1f15)}
+.lib{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.shelf{display:flex;gap:clamp(.8rem,2vw,1.6rem);justify-content:center;perspective:1600px;position:relative;padding-bottom:1.4rem}
+.vol{width:min(230px,42vw);border-radius:3px 10px 10px 3px;overflow:hidden;position:relative;transform:rotateY(-15deg) rotateX(3deg);box-shadow:-22px 30px 60px -20px rgba(0,0,0,.95),inset -3px 0 0 rgba(255,255,255,.06);transition:transform .6s}
+.vol:hover{transform:rotateY(-3deg) translateY(-10px)}
+.vol.v2{transform:rotateY(15deg) rotateX(3deg);border-radius:10px 3px 3px 10px;box-shadow:22px 30px 60px -20px rgba(0,0,0,.95),inset 3px 0 0 rgba(255,255,255,.06)}
+.vol.v2:hover{transform:rotateY(3deg) translateY(-10px)}
+.vol img{width:100%;display:block}
+.vol:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.5) 0 3%,rgba(255,255,255,.14) 5%,transparent 12%)}
+.vol.v2:after{background:linear-gradient(270deg,rgba(0,0,0,.5) 0 3%,rgba(255,255,255,.14) 5%,transparent 12%)}
+.badge21{position:absolute;top:.6rem;right:.6rem;z-index:2;font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;color:var(--gold);border:1px solid rgba(216,180,92,.55);background:rgba(6,18,12,.75);padding:.2rem .4rem;border-radius:5px}
+.locktag{position:absolute;left:50%;bottom:0;transform:translateX(-50%);z-index:5;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(6,18,12,.92);border:1px solid rgba(216,180,92,.5);padding:.4rem .8rem;border-radius:999px;white-space:nowrap}
+.editors{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;color:var(--mute);margin:.6rem 0 1.2rem;flex-wrap:wrap}
+.editors .dots{display:flex}
+.editors .dots i{width:20px;height:20px;border-radius:50%;border:2px solid var(--ink2);margin-left:-7px;background:linear-gradient(135deg,var(--green2),var(--gold))}
+.editors .dots i:first-child{margin:0}
+.libcta{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.4rem}
+@media(max-width:860px){.lib{grid-template-columns:1fr;gap:3rem}}
 
-/* WATCH */
-#watch{margin:70px 0;position:relative}
-#watch .band{position:relative;min-height:520px;display:flex;align-items:center;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden}
-#watch .bg{position:absolute;inset:0;background:url("assets/watch.jpg") center/cover no-repeat}
-#watch .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,11,8,.94) 22%,rgba(6,11,8,.55) 55%,rgba(6,11,8,.25))}
-#watch .wrap{position:relative;padding-top:70px;padding-bottom:70px}
-.onair{display:inline-flex;align-items:center;gap:9px;background:#180b07;border:1px solid rgba(180,85,45,.6);color:#ffb28f;font-size:10px;letter-spacing:3px;padding:7px 13px;text-transform:uppercase}
-.onair s{width:8px;height:8px;border-radius:50%;background:#ff5a3c;box-shadow:0 0 10px #ff5a3c;animation:pulse 1.6s infinite;text-decoration:none}
+.guild{position:relative;padding:clamp(3.5rem,8vw,7rem) 0;overflow:hidden;isolation:isolate}
+.guild .bg{position:absolute;inset:0;background:var(--ink3) url(assets/guild.jpg) center/cover;z-index:-2}
+.guild .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(6,18,12,.96) 0%,rgba(6,18,12,.8) 45%,rgba(6,18,12,.45) 100%),linear-gradient(180deg,var(--ink),transparent 22%,rgba(6,18,12,.9))}
+.guild .in{max-width:620px;display:grid;gap:.9rem}
+.guild .price{display:flex;align-items:baseline;gap:.8rem}
+.guild .price .n{font-size:clamp(3rem,7vw,4.6rem);font-weight:800;color:var(--gold);letter-spacing:-.05em;line-height:1}
+.guild .price .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cream2)}
+.perks{display:grid;gap:.45rem}
+.perks div{display:flex;gap:.7rem;align-items:baseline;color:var(--cream2);font-weight:300}
+.perks div b{color:var(--cream);font-weight:600}
+.soon{display:inline-block;font-family:var(--mono);font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(216,180,92,.45);border-radius:999px;padding:.1rem .4rem;margin-left:.35rem;vertical-align:1px;white-space:nowrap}
+.perks div:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none;transform:translateY(-2px)}
 
-/* SLATE */
-#slate{padding:80px 0 30px}
-.sessions{position:relative;border:1px solid var(--hair);overflow:hidden;margin-top:36px}
-.sessions img,.sessions video{width:100%;height:auto;display:block}
-.vidbtn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(5,9,7,.78);border:1px solid var(--gold);color:var(--gold-hi);padding:14px 26px;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(3px)}
-.vidbtn:hover{background:rgba(201,162,75,.18)}
-.sessions .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 28px 18px;background:linear-gradient(180deg,transparent,rgba(5,9,7,.92) 60%);display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline}
-.sessions .cap b{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:.5px}
-.sessions .cap span{font-size:12px;color:var(--dim)}
-.slate-strip{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--hair);border-top:none}
-.slate-strip div{flex:1 1 180px;text-align:center;padding:20px 14px;border-right:1px solid var(--hair);font-family:var(--serif);font-size:15px;letter-spacing:2px;color:var(--cream);text-transform:uppercase}
-.slate-strip div:last-child{border-right:none}
-.slate-strip div small{display:block;font-family:var(--sans);font-size:8.5px;letter-spacing:2.5px;color:var(--faint);margin-top:5px;text-transform:uppercase}
-.legal-line{font-size:11px;color:#8f9c8f;margin-top:12px;letter-spacing:.4px}
+.final{position:relative;padding:clamp(3.5rem,8vw,6.5rem) 0;text-align:center;overflow:hidden;isolation:isolate}
+.final .bg{position:absolute;inset:0;background:var(--ink3) url(assets/finale.jpg) center 34%/cover;opacity:.46;z-index:-2}
+.final .shade{position:absolute;inset:0;z-index:-1;background:radial-gradient(78% 88% at 50% 44%,rgba(6,18,12,.58),rgba(6,18,12,.9) 74%,var(--ink) 94%)}
+.final .inner{display:grid;gap:1.2rem;justify-items:center}
+.final .actions{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center}
+footer{padding:2.6rem 0 2.2rem;border-top:1px solid rgba(255,255,255,.06);background:#040d09}
+footer .row{display:flex;justify-content:space-between;gap:1.6rem;flex-wrap:wrap;align-items:center}
+footer .logos{display:flex;gap:1.4rem;align-items:center}
+footer .logos img{height:44px;width:auto;opacity:.9}
+footer .links{display:flex;gap:1.1rem;font-size:.8rem;color:var(--cream2);flex-wrap:wrap;align-items:center}
+footer .links a:hover{color:var(--green)}
+footer .legal{font-family:var(--mono);font-size:.6rem;letter-spacing:.05em;color:var(--mute);line-height:1.8;max-width:860px;margin-top:1.4rem}
+.hidden-door{opacity:.34;font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;transition:opacity .3s,color .3s;cursor:pointer;border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:.28rem .55rem}
+.hidden-door:hover{opacity:1;color:var(--gold);border-color:rgba(216,180,92,.5)}
 
-/* 2027 layer: scroll reveals, aurora, tilt and parallax (all motion-guarded) */
-.rv-up{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.rv-up.in{opacity:1;transform:none}
-html[data-motion="off"] .rv-up{opacity:1;transform:none;transition:none}
-.aurora{position:absolute;left:50%;top:44%;width:min(78vw,900px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;opacity:.5;filter:blur(46px);background:conic-gradient(from 0deg,transparent 12%,rgba(201,162,75,.20) 22%,transparent 38%,rgba(31,122,77,.25) 55%,transparent 72%,rgba(232,207,138,.14) 86%,transparent 96%);animation:spin 44s linear infinite}
-html[data-motion="off"] .aurora{animation:none}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-.plate{will-change:transform}
-.plate img{will-change:transform}
-.btn{position:relative;overflow:hidden}
-.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);transition:left .5s ease}
-.btn:hover::after{left:130%}
-html[data-motion="off"] .btn::after{display:none}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(3,10,6,.82);backdrop-filter:blur(10px)}
+.modal.show{display:flex}
+.modal .box{width:min(520px,100%);max-height:92svh;overflow:auto;border-radius:24px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(170deg,#0f2419,#06120c);padding:clamp(1.5rem,4vw,2.2rem);position:relative;animation:pop .35s cubic-bezier(.2,.9,.3,1.2)}
+.modal .box.wide{width:min(860px,100%)}
+@keyframes pop{from{transform:translateY(18px) scale(.97);opacity:0}}
+.modal .x{position:absolute;top:.85rem;right:.85rem;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:grid;place-items:center;font-size:1.15rem;color:var(--cream2);z-index:3}
+.modal h3{font-size:clamp(1.6rem,4.4vw,2.25rem);text-transform:uppercase;margin:.35rem 0 .45rem;letter-spacing:-.03em;line-height:.95}
+.modal .sub{color:var(--cream2);font-weight:300;font-size:.97rem}
+.modal form{display:grid;gap:.65rem;margin-top:1rem}
+.modal input[type=text],.modal input[type=email]{height:54px;border-radius:14px;border:1px solid rgba(243,239,228,.22);background:rgba(6,18,12,.75);color:var(--cream);padding:0 1.1rem;font:inherit;font-size:1rem;width:100%}
+.modal input:focus{outline:2px solid var(--green)}
+.modal .btn{width:100%}
+.modal .small{font-family:var(--mono);font-size:.6rem;letter-spacing:.04em;color:var(--mute);line-height:1.65}
+.modal .stage{display:none}.modal .stage.on{display:block}
+.dl{display:grid;gap:.55rem;margin-top:.9rem}
+.dl a{display:flex;justify-content:space-between;align-items:center;padding:.95rem 1.1rem;border-radius:13px;border:1px solid rgba(216,180,92,.35);background:rgba(216,180,92,.06)}
+.dl a:hover{background:rgba(216,180,92,.14)}
+.dl a b{display:block}.dl a span{font-size:.74rem;color:var(--cream2)}
+.dl a .get{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--gold)}
+.co-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding-bottom:.85rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.co-price{text-align:right;flex:none}
+.co-price .n{font-size:2.3rem;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-.04em}
+.co-price .k{font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:.2rem}
+.unlockrow{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.9rem 0 .2rem}
+.unlockrow figure{margin:0;display:grid;gap:.3rem;justify-items:center}
+.unlockrow img{width:100%;height:96px;object-fit:cover;object-position:top center;border-radius:9px;border:1px solid rgba(216,180,92,.3);background:var(--ink3)}
+.unlockrow .gift img{object-position:center}
+.unlockrow figcaption{font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.getlist{display:grid;gap:.32rem;margin:.7rem 0 .95rem}
+.getlist div{display:flex;gap:.55rem;align-items:baseline;font-size:.85rem;color:var(--cream2);font-weight:300;line-height:1.4}
+.getlist div b{color:var(--cream);font-weight:700}
+.getlist svg{stroke:var(--gold);flex:none;transform:translateY(1px)}
+.ordiv{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin:.85rem 0 .2rem}
+.ordiv:before,.ordiv:after{content:"";height:1px;background:rgba(255,255,255,.14);flex:1}
+#cardMount{border:1px solid rgba(243,239,228,.22);border-radius:14px;padding:.9rem;background:#0d1f16;min-height:48px}
+#buyBtnMount:not(:empty){margin:.2rem 0 .1rem}
+.altpay{display:grid;gap:.45rem;margin-top:.55rem}
+.altpay a{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:46px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:.85rem;font-weight:700;color:var(--cream);background:rgba(255,255,255,.04)}
+.altpay a:hover{border-color:var(--gold);color:var(--gold)}
+.cardbox{border:1px solid rgba(243,239,228,.22);border-radius:14px;background:#0d1f16;overflow:hidden}
+.cardbox .hd{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.5rem .75rem;border-bottom:1px solid rgba(255,255,255,.1);font-family:var(--mono);font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cardbox .hd .lk{display:inline-flex;align-items:center;gap:.3rem;color:var(--green)}
+.cardrow{display:flex;align-items:center;gap:.6rem;padding:.72rem .75rem;border-top:1px solid rgba(255,255,255,.07)}
+.cardrow:first-of-type{border-top:0}
+.cardrow input{background:none;border:0;outline:0;color:var(--cream);font:inherit;font-size:.95rem;width:100%;height:auto;padding:0;letter-spacing:.02em}
+.cardrow input::placeholder{color:#5d7267}
+.cardrow input:read-only{cursor:default}
+.cardsplit{display:grid;grid-template-columns:1fr 1fr 1fr}
+.cardsplit .cardrow{border-left:1px solid rgba(255,255,255,.07)}
+.cardsplit .cardrow:first-child{border-left:0}
+.cardbox .mini{display:flex;gap:.22rem}
+.cardbox .mini .chip{height:19px;min-width:29px;font-size:.44rem;padding:0 .28rem}
+.cardbox .mini .chip.mc i{width:9px;height:9px}
+.pending{border:1px solid rgba(216,180,92,.45);background:rgba(216,180,92,.08);border-radius:12px;padding:.7rem .85rem;font-size:.83rem;color:var(--cream2);font-weight:300;line-height:1.5}
+.pending b{color:var(--gold);font-weight:700}
+.opnote{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;color:#7d8f85;line-height:1.6;margin-top:.5rem;padding-left:.1rem}
+.setupnote{border:1px dashed rgba(216,180,92,.5);background:rgba(216,180,92,.07);border-radius:12px;padding:.8rem .9rem;font-family:var(--mono);font-size:.6rem;line-height:1.7;color:var(--cream2);letter-spacing:.03em}
+.setupnote b{color:var(--gold)}
+.err{color:#ff9a8f;font-size:.8rem;min-height:1em}
+.paybtn{width:100%;font-size:1.04rem;min-height:62px;font-weight:800;letter-spacing:-.01em}
+.declines{display:flex;justify-content:center;margin-top:.8rem}
+.declines button{font-family:var(--mono);font-size:.61rem;letter-spacing:.08em;color:var(--mute);text-decoration:underline;text-underline-offset:3px;padding:.35rem}
+.declines button:hover{color:var(--cream2)}
+.guarantee{display:flex;gap:.6rem;align-items:flex-start;border:1px solid rgba(63,208,106,.28);background:rgba(63,208,106,.07);border-radius:12px;padding:.7rem .8rem;margin-top:.8rem}
+.guarantee svg{stroke:var(--green);flex:none;margin-top:1px}
+.guarantee p{font-size:.75rem;color:var(--cream2);font-weight:300;line-height:1.45}
 
-/* FOUNDING */
-#founding{padding:90px 0;position:relative;overflow:hidden}
-#founding .bgroot{position:absolute;inset:0;background:url("assets/rooted.jpg") center/cover no-repeat;opacity:.1;-webkit-mask-image:radial-gradient(80% 90% at 50% 40%,#000 20%,transparent 80%);mask-image:radial-gradient(80% 90% at 50% 40%,#000 20%,transparent 80%)}
-#founding .wrap{position:relative}
-.found-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;margin-top:44px;align-items:start}
-.ratecard{border:1px solid var(--line);background:linear-gradient(180deg,rgba(201,162,75,.06),rgba(201,162,75,.01))}
-.ratecard .rc-head{padding:16px 22px;border-bottom:1px solid var(--hair);display:flex;justify-content:space-between;align-items:center}
-.ratecard .rc-head span{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
-.tier{padding:18px 22px;border-bottom:1px solid var(--hair);display:flex;align-items:baseline;gap:16px;position:relative}
-.tier .tn{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);flex:1}
-.tier .tp{font-family:var(--serif);font-size:26px;color:var(--dim)}
-.tier.cross .tn,.tier.cross .tp{opacity:.55}
-.tier.cross::after{content:"";position:absolute;left:14px;right:14px;top:50%;height:2px;background:var(--rust);transform:rotate(-2.2deg);box-shadow:0 0 8px rgba(180,85,45,.5)}
-.tier .stamp{position:absolute;right:18px;top:8px;font-size:8px;letter-spacing:2px;color:var(--rust);border:1px solid var(--rust);padding:2px 7px;transform:rotate(6deg);text-transform:uppercase;background:rgba(6,11,8,.6)}
-.tier.hero{background:linear-gradient(180deg,rgba(201,162,75,.14),rgba(201,162,75,.03));border-left:2px solid var(--gold)}
-.tier.hero .tn{color:var(--gold-hi)}
-.tier.hero .tp{color:var(--gold-hi);font-size:34px}
-.tier.hero .tp small{font-size:12px;color:var(--dim);letter-spacing:1px}
-.perks{padding:18px 22px 8px}
-.perks li{list-style:none;padding:9px 0;border-bottom:1px solid rgba(201,162,75,.08);font-size:13.5px;color:var(--cream);display:flex;gap:12px;align-items:baseline}
-.perks li::before{content:"";width:7px;height:7px;background:var(--gold);transform:rotate(45deg);flex:none;position:relative;top:1px}
-.perks li b{color:var(--gold-hi);font-weight:600}
-.ratecard .rc-cta{padding:20px 22px 24px}
-.freeline{margin-top:14px;font-size:12.5px;color:var(--dim)}
-.tierpeek{border-top:1px solid var(--hair)}
-.tierpeek summary{padding:16px 22px;font-family:var(--sans);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
-.tierpeek .tp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:4px 22px 12px}
-.tierpeek h5{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-hi);margin-bottom:8px}
-.tierpeek ul{list-style:none}
-.tierpeek li{font-size:12px;color:var(--dim);padding:5px 0;border-bottom:1px solid rgba(201,162,75,.07);line-height:1.5}
-@media(max-width:760px){.tierpeek .tp-grid{grid-template-columns:1fr}}
-.linklike{background:none;border:none;color:var(--gold-hi);cursor:pointer;text-decoration:underline;font-size:inherit;padding:0}
-.upline{font-size:13px;color:var(--cream);border:1px solid var(--hair);padding:11px 13px;margin-bottom:10px}
-.upline b{color:var(--gold-hi);font-weight:600}
-.foundpass img{border:1px solid var(--hair)}
-.foundpass .fp-cap{font-size:11px;color:var(--faint);margin-top:10px;letter-spacing:.5px}
-.seatline{display:flex;gap:14px;align-items:center;margin-top:22px;border:1px solid var(--hair);padding:14px 18px}
-.seatline .sn{font-family:var(--serif);font-size:30px;color:var(--gold-hi)}
-.seatline .st{font-size:11.5px;color:var(--dim);letter-spacing:.5px;line-height:1.4}
-@media(max-width:1000px){.found-grid{grid-template-columns:1fr}}
+.survey{position:fixed;right:1rem;bottom:1rem;z-index:70;width:min(310px,calc(100vw - 2rem));border-radius:18px;border:1px solid rgba(63,208,106,.45);background:linear-gradient(165deg,#12301f,#06120c);box-shadow:0 24px 60px -18px rgba(0,0,0,.9),0 0 40px -12px rgba(63,208,106,.35);padding:1.1rem 1.2rem;transform:translateY(160%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.3,.9,.3,1.1),opacity .3s;display:grid;gap:.55rem}
+.survey.on{transform:none;opacity:1;pointer-events:auto}
+.qbadge{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(216,180,92,.45);background:rgba(216,180,92,.09);padding:.3rem .6rem;border-radius:999px;width:fit-content}
+.qbadge svg{stroke:var(--gold)}
+.survey .k{font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+.survey h4{font-size:1.12rem;font-weight:700;line-height:1.15}
+.survey p{font-size:.81rem;color:var(--cream2);font-weight:300}
+.survey .row{display:flex;gap:.5rem;align-items:center;margin-top:.2rem}
+.survey .btn{min-height:44px;padding:.6rem 1rem;font-size:.82rem;flex:1}
+.survey .no{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;color:var(--mute);cursor:pointer;padding:.4rem}
+.survey .close{position:absolute;top:.5rem;right:.6rem;color:var(--mute);font-size:1rem;padding:.25rem}
+#surveyFrame{width:100%;height:min(68svh,620px);border:0;border-radius:14px;background:#fff}
 
-/* VIBE */
-#vibe{margin:60px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);position:relative;overflow:hidden}
-#vibe .bg{position:absolute;inset:0;background:url("assets/recover.jpg") center 35%/cover no-repeat;opacity:.14}
-#vibe .wrap{position:relative;padding-top:80px;padding-bottom:80px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.credit-tile{border:1px solid var(--line);background:rgba(6,11,8,.75);padding:28px;text-align:center}
-.credit-tile .amt{font-family:var(--serif);font-size:44px;color:var(--gold-hi)}
-.credit-tile .raf{font-size:12px;color:var(--dim);margin-top:8px}
-@media(max-width:1000px){#vibe .wrap{grid-template-columns:1fr}}
-
-/* FAQ */
-#faq{padding:70px 0}
-.faq-list{margin-top:30px;border-top:1px solid var(--hair)}
-details{border-bottom:1px solid var(--hair)}
-summary{cursor:pointer;padding:20px 4px;font-family:var(--serif);font-size:19px;letter-spacing:.3px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--sans);color:var(--gold);font-size:20px;transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{padding:0 4px 20px;color:var(--dim);font-size:14px;max-width:720px}
-
-/* CLOSER */
-#closer{padding:100px 0 120px;text-align:left}
-#closer .big{font-family:var(--serif);font-size:clamp(34px,5.4vw,64px);line-height:1.05;max-width:900px}
-#closer .big em{font-style:italic;color:var(--gold-hi)}
-#closer .trio{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
-footer{border-top:1px solid var(--hair);padding:34px 0 70px;font-size:10.5px;color:var(--faint);letter-spacing:.5px}
-footer .frow{display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;align-items:baseline}
-footer .social{display:flex;gap:16px}
-footer .social span{letter-spacing:2px}
-footer p{margin-top:10px;max-width:820px;line-height:1.6}
-
-/* DOCK */
-.dock{position:fixed;left:50%;bottom:46px;transform:translate(-50%,calc(100% + 90px));z-index:85;display:flex;gap:1px;border:1px solid var(--line);background:rgba(5,9,7,.9);backdrop-filter:blur(8px);transition:transform .45s ease;box-shadow:0 18px 50px rgba(0,0,0,.55)}
-.dock.on{transform:translate(-50%,0)}
-.dock a{padding:14px 22px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;color:var(--cream);border-right:1px solid var(--hair);transition:background .2s,color .2s;white-space:nowrap}
-.dock a:last-child{border-right:none}
-.dock a:hover{background:rgba(201,162,75,.1);color:var(--gold-hi)}
-.dock a.prime{background:linear-gradient(90deg,#a9832f,#e8cf8a 50%,#a9832f);color:#1a1204;font-weight:700}
-.dock .short{display:none}
+.cg-launch{position:fixed;left:1rem;bottom:1rem;z-index:69;display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .9rem .55rem .55rem;border-radius:999px;border:1px solid rgba(216,180,92,.4);background:rgba(10,26,18,.92);backdrop-filter:blur(12px);box-shadow:0 16px 40px -14px rgba(0,0,0,.85);font-family:var(--mono);font-size:.59rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream2);transform:translateY(180%);opacity:0;pointer-events:none;transition:transform .5s cubic-bezier(.3,.9,.3,1.1),opacity .3s}
+.cg-launch.on{transform:none;opacity:1;pointer-events:auto}
+.cg-launch:hover{border-color:var(--gold);color:var(--gold)}
+.cg-launch .av{width:25px;height:25px;border-radius:50%;background:linear-gradient(135deg,var(--green2),var(--gold));display:grid;place-items:center;flex:none}
+.cg-launch .av span{width:7px;height:7px;border-radius:50%;background:var(--cream);animation:blink 2.6s infinite}
+@keyframes blink{0%,90%,100%{opacity:1}95%{opacity:.25}}
+.cg{position:fixed;left:1rem;bottom:1rem;z-index:71;width:min(330px,calc(100vw - 2rem));border-radius:20px;border:1px solid rgba(216,180,92,.35);background:linear-gradient(170deg,#12301f,#06120c);box-shadow:0 28px 70px -20px rgba(0,0,0,.92);display:none;overflow:hidden}
+.cg.on{display:block;animation:pop .3s ease}
+.cg .top{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.cg .top .av{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--green2),var(--gold));flex:none}
+.cg .top .nm{font-size:.84rem;font-weight:700;letter-spacing:-.01em}
+.cg .top .st{font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.cg .top button{margin-left:auto;color:var(--mute);font-size:1.1rem;padding:.2rem .35rem}
+.cg .body{padding:.85rem;display:grid;gap:.5rem;max-height:44svh;overflow:auto}
+.cg .msg{font-size:.84rem;line-height:1.45;padding:.6rem .78rem;border-radius:14px;max-width:92%}
+.cg .msg.bot{background:rgba(255,255,255,.07);color:var(--cream);border-bottom-left-radius:5px}
+.cg .msg.me{background:var(--green);color:#03150a;justify-self:end;border-bottom-right-radius:5px;font-weight:600}
+.cg .qr{display:grid;gap:.38rem;padding:.15rem .85rem .85rem}
+.cg .qr button{text-align:left;font-size:.78rem;padding:.58rem .78rem;border-radius:12px;border:1px solid rgba(216,180,92,.35);color:var(--cream);background:rgba(216,180,92,.06);transition:background .2s}
+.cg .qr button:hover{background:rgba(216,180,92,.16)}
 @media(max-width:760px){
-  .dock{left:0;right:0;bottom:0;transform:translate(0,calc(100% + 90px));width:100%;border-left:none;border-right:none}
-  .dock.on{transform:translate(0,0)}
-  .dock a{flex:1;text-align:center;padding:14px 6px;font-size:10px;letter-spacing:1px}
-  .dock .full{display:none}.dock .short{display:inline}
-  .tickerbar{display:none}
+  .cg-launch,.cg{bottom:calc(76px + env(safe-area-inset-bottom))}
+  .survey{bottom:calc(76px + env(safe-area-inset-bottom));left:.6rem;right:.6rem;width:auto}
+  .survey.on ~ .cg-launch{opacity:0;pointer-events:none}
 }
 
-/* MODAL */
-.modal-back{position:fixed;inset:0;background:rgba(4,7,5,.8);backdrop-filter:blur(4px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
-.modal-back.on{display:flex}
-.modal{width:460px;max-width:100%;max-height:92vh;overflow-y:auto;background:linear-gradient(180deg,#0d1611,#080f0b);border:1px solid var(--line);padding:30px 28px;position:relative}
-.modal .mx{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--dim);font-size:20px;cursor:pointer}
-.modal .mk{font-size:9.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
-.modal h3{font-family:var(--serif);font-weight:400;font-size:26px;margin:8px 0 4px}
-.modal .msub{font-size:12.5px;color:var(--dim);margin-bottom:16px}
-.field{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--hair);padding:13px 14px;font-size:16px;color:var(--cream);margin-bottom:10px;letter-spacing:.3px}
-.field:focus{outline:none;border-color:var(--gold)}
-.field::placeholder{color:#6f6a5a}
-.check{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--dim);margin:8px 0;cursor:pointer}
-.check input{margin-top:3px;accent-color:var(--gold)}
-.modal .btn{width:100%;margin-top:12px}
-.consent{font-size:11px;color:#93a094;line-height:1.55;margin-top:12px}
-.consent a{color:var(--gold-hi)}
-.m-success{text-align:center;display:none}
-.m-success .badge{width:110px;height:110px;margin:10px auto 14px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(201,162,75,.22),transparent 70%);position:relative;overflow:hidden}
-.m-success .badge .lbl{font-size:10px;letter-spacing:2px;color:var(--gold-hi);text-transform:uppercase;text-align:center;line-height:1.4}
-.m-success .badge .shine{position:absolute;top:-60%;left:-60%;width:80%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:rotate(25deg);animation:sweep 2.6s ease-in-out infinite}
-@keyframes sweep{0%{left:-70%}60%,100%{left:130%}}
-.sharebox{border:1px solid var(--hair);padding:12px;margin-top:14px;font-size:12px;color:var(--dim);word-break:break-all}
-.bookrow{display:flex;gap:8px;margin-top:14px}
-.bookrow a{flex:1;border:1px solid var(--line);background:rgba(201,162,75,.08);color:var(--gold-hi);text-decoration:none;font-size:11px;letter-spacing:.6px;padding:11px 8px;text-align:center}
-.bookrow a:hover{border-color:var(--gold)}
-.sharebox b{color:var(--gold-hi)}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:.55rem .7rem calc(.55rem + env(safe-area-inset-bottom));background:rgba(6,18,12,.94);backdrop-filter:blur(14px);border-top:1px solid rgba(255,255,255,.08);display:none;gap:.5rem;transform:translateY(120%);transition:transform .4s}
+.stick.on{transform:none}
+.stick .btn{flex:1;min-height:50px;padding:.6rem;font-size:.82rem}
+@media(max-width:760px){.stick{display:flex}}
 
-/* nudge */
-.nudge{position:fixed;top:0;left:0;right:0;z-index:210;background:#0d1611;border-bottom:1px solid var(--line);padding:13px 48px 13px 22px;font-size:12.5px;color:var(--cream);display:none;align-items:center;gap:18px;justify-content:center}
-.nudge.on{display:flex}
-.nudge b{color:var(--gold-hi)}
-.nudge button.go{background:var(--gold);border:none;color:#1a1204;padding:8px 16px;font-size:10px;letter-spacing:2px;font-weight:700;text-transform:uppercase;cursor:pointer}
-.nudge .nx{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--dim);font-size:16px;cursor:pointer}
-.nudgefield{width:220px;margin:0;padding:8px 12px;font-size:16px;background:rgba(255,255,255,.05);border:1px solid var(--hair);color:var(--cream)}
-.nudge-alt{font-size:11px;color:var(--dim)}
-.nudge-alt a{color:var(--gold-hi)}
-@media(max-width:760px){.nudge{flex-wrap:wrap;padding:12px 44px 12px 16px}.nudge-alt{display:none}}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:4px}
 </style>
 </head>
 <body>
 
-<div class="atmo" aria-hidden="true"><b class="a1"></b><b class="a2"></b><b class="a3"></b></div>
-<canvas id="sparkle" aria-hidden="true"></canvas>
-<div class="grain" aria-hidden="true"></div>
-<div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-<div class="spine l" aria-hidden="true">THE GREENROOM NETWORK</div>
-<div class="spine r" aria-hidden="true">FOUNDING CLASS OF 1,000 · WINTER 2026</div>
-
-<header class="topbar">
-  <a class="wordmark" href="#gate">GREEN<b>ROOM</b></a>
-  <nav class="topnav" aria-label="Primary">
-    <a href="#doors">Choose your door</a>
-    <a href="#worlds">Worlds</a>
-    <a href="#slate">The slate</a>
-    <a href="#founding">Founding 1000</a>
-    <a href="survey.html" data-track="nav_vibe">Vibe check</a>
-  </nav>
-  <a class="livechip" href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="nav_watch"><s></s>Watch live</a>
-</header>
-
-<main>
-
-<!-- GATE -->
-<section id="gate" aria-label="Enter the Greenroom">
-  <div class="depth" id="depth" aria-hidden="true">
-    <div class="dl far bgimg"></div>
-    <div class="aurora"></div>
-    <div class="dl mid"></div>
-    <div class="dl near"></div>
-  </div>
-  <div class="timecode" id="timecode">REC 00:00:00:00</div>
+<nav id="nav">
   <div class="wrap">
-    <div class="kick">The wellness entertainment network</div>
-    <p class="gate-net">Streaming · Live shopping · Recovery · Community</p>
-    <h1 class="gate-h cine1"><span class="sr">The Greenroom Network. </span>Watch it. Trust it.<span class="row2">Own it.</span></h1>
-    <p class="gate-sub cine2">Shows worth your evening. Drops worth your tap. Recovery worth your body. One room, built with athletes, creators and the culture. Doors open Winter 2026.</p>
-    <form class="herocap cine3" id="heroCap" novalidate>
-      <input class="field herofield" id="heroEmail" type="email" placeholder="Your email. That is the whole ask." autocomplete="email" aria-label="Email for the launch letter">
-      <button class="btn" type="submit" data-track="hero_join">Join free</button>
-    </form>
-    <p class="err" id="heroErr" role="alert">Enter a valid email and you are in.</p>
-    <div class="gate-ctas">
-      <a class="btn ghost" href="#reserve" data-track="gate_reserve">Reserve my founding seat · $1.99</a>
-      <a class="btn ghost" id="enterBtn" href="https://stokednetwork.com/?utm_source=thegreenroomnetwork&utm_campaign=founding1000&utm_content=enter" target="_blank" rel="noopener" data-track="enter">Enter the Greenroom</a>
-      <a class="vibelink" href="survey.html" data-track="gate_vibe">Take the 60 second Vibe Check. Earn a $10 credit.</a>
-    </div>
-    <p class="micro">Joining free unlocks two member guides on the spot: <b>Well Paired</b>, the Greenroom pairing guide, and <b>The Wedge</b>, the annual report. The seat is $1.99, refundable any time. Cannabis lanes are 21 and over.</p>
-    <a class="offerstrip" href="#reserve" data-track="offerstrip">$1.99 holds a founding seat. <b>First month free at launch.</b> Rate locked for life. Refundable any time. <b>1,000 seats, then founding closes.</b></a>
-  </div>
-  <div class="scrollcue">Scroll</div>
-</section>
-
-<!-- IDENTITY -->
-<section id="doors" aria-label="Choose your door">
-  <div class="wrap">
-    <div class="kick">Choose your door</div>
-    <h2>What brings you into <em>the Greenroom?</em></h2>
-    <p class="lede">Pick a door and the room arranges itself around you. You can wander anywhere after.</p>
-    <div class="doorgrid" role="group" aria-label="Pick your path">
-      <button class="door" data-door="recover"><span class="no">DOOR 01</span><span class="nm serif">Recover</span><span class="tag">Rest like it is your job.</span></button>
-      <button class="door" data-door="perform"><span class="no">DOOR 02</span><span class="nm serif">Perform</span><span class="tag">Train hard. Recover harder.</span></button>
-      <button class="door" data-door="experience"><span class="no">DOOR 03</span><span class="nm serif">Explore</span><span class="tag">Shows, drops and the culture.</span></button>
-      <button class="door" data-door="connect"><span class="no">DOOR 04</span><span class="nm serif">Connect</span><span class="tag">Come for the show. Stay for the people.</span></button>
-    </div>
-    <div class="door-note" id="doorNote" aria-live="polite"></div>
-  </div>
-</section>
-
-<!-- WORLDS -->
-<section id="worlds" aria-label="The three worlds">
-  <div class="wrap">
-
-    <article class="world" id="w-rooted" data-world="rooted">
-      <div class="head">
-        <div class="idx serif">01</div>
-        <div>
-          <span class="yours-tag">Your room</span>
-          <h3>Rooted in the culture. <em>Grown in the light.</em></h3>
-          <p class="wl">Mindfulness, plant wisdom and the spirit of the room. One wellness network with a lane for every kind of member.</p>
-          <span class="lanechip">Wellness first · every lane welcome</span><br>
-          <button class="openbtn" data-open="rooted" aria-expanded="false" aria-controls="rv-rooted">Open this world</button>
-        </div>
-        <figure class="plate"><img src="assets/rooted.jpg" alt="A luminous plant rooted beneath an ancient tree and a sky of golden constellations" loading="lazy"><figcaption class="ph">Rooted</figcaption></figure>
-      </div>
-      <div class="reveal" id="rv-rooted">
-        <div class="reveal-in">
-          <div class="rv"><h4>Content</h4><p>Meditations, breath and sound sessions, culture documentaries and conversations that slow the room down.</p></div>
-          <div class="rv"><h4>Products</h4><p>Ritual goods on live drops. Teas, candles, journals and tools for a grounded practice.</p></div>
-          <div class="rv"><h4>Guides</h4><p>Teachers, healers and practitioners who live the practice, not just post it.</p></div>
-          <div class="rv"><h4>Community</h4><p>Intention circles, gratitude walls and rooms that hold space as well as they hold court.</p></div>
-          <div class="rv cta-col"><a class="btn sm" href="survey.html" data-track="world_rooted_cta">Find your lane</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="world" id="w-recover" data-world="recover">
-      <div class="head">
-        <div class="idx serif">02</div>
-        <div>
-          <span class="yours-tag">Your room</span>
-          <h3>Recovery is a practice. <em>Train it here.</em></h3>
-          <p class="wl">Breathwork, sleep, plant wellness and the science of slowing down, taught by people who live it.</p>
-          <span class="lanechip">Plant wellness lane · 21 and over</span><br>
-          <button class="openbtn" data-open="recover" aria-expanded="false" aria-controls="rv-recover">Open this world</button>
-        </div>
-        <figure class="plate"><img src="assets/recover.jpg" alt="A quiet recovery studio with a meditating figure, a soaking tub and soft green light" loading="lazy"><figcaption class="ph">Recover</figcaption></figure>
-      </div>
-      <div class="reveal" id="rv-recover">
-        <div class="reveal-in">
-          <div class="rv"><h4>Content</h4><p>The Recovery Room. Guided sessions, sleep and breath series, plant wellness education for grown folks.</p></div>
-          <div class="rv"><h4>Products</h4><p>Recovery goods on live drops. Balms, soaks, teas and tools. Legal goods only, every lane.</p></div>
-          <div class="rv"><h4>Experts</h4><p>Pro athletes and licensed practitioners who recover for a living and show their whole routine.</p></div>
-          <div class="rv"><h4>Community</h4><p>Member check ins, rest challenges and a room that claps when you slow down.</p></div>
-          <div class="rv cta-col"><a class="btn sm" href="survey.html" data-track="world_recover_cta">Build my wellness profile</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="world" id="w-perform" data-world="perform">
-      <div class="head">
-        <div class="idx serif">03</div>
-        <div>
-          <span class="yours-tag">Your room</span>
-          <h3>Built with athletes who <em>actually recover.</em></h3>
-          <p class="wl">Training stories and recovery protocols from a network of more than 2,000 athletes and celebrities.</p>
-          <button class="openbtn" data-open="perform" aria-expanded="false" aria-controls="rv-perform">Open this world</button>
-        </div>
-        <figure class="plate"><img src="assets/worlds.jpg" alt="A surfer, a runner and a meditating athlete around a glowing plant at golden hour" loading="lazy"><figcaption class="ph">Perform</figcaption></figure>
-      </div>
-      <div class="reveal" id="rv-perform">
-        <div class="reveal-in">
-          <div class="rv"><h4>Content</h4><p>Athlete documentaries, training series and the honest tape of what recovery really costs.</p></div>
-          <div class="rv"><h4>Products</h4><p>Performance and recovery gear on live drops, picked by the athletes who use it.</p></div>
-          <div class="rv"><h4>Experts</h4><p>Pros, trainers and physios from the locker rooms you already watch on Sundays.</p></div>
-          <div class="rv"><h4>Community</h4><p>Team challenges, watch parties and a leaderboard for people who take rest seriously.</p></div>
-          <div class="rv cta-col"><a class="btn sm" href="#founding" data-track="world_perform_cta">Get early access</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="world" id="w-experience" data-world="experience">
-      <div class="head">
-        <div class="idx serif">04</div>
-        <div>
-          <span class="yours-tag">Your room</span>
-          <h3>The shoppable channel <em>for the culture.</em></h3>
-          <p class="wl">Live shows, creators, products and community in one stream. See it, tap it, own it.</p>
-          <button class="openbtn" data-open="experience" aria-expanded="false" aria-controls="rv-experience">Open this world</button>
-        </div>
-        <figure class="plate"><img src="assets/drops.jpg" alt="A live drop scene of hoodies, jars and shopping bags around a stack of televisions" loading="lazy"><figcaption class="ph">Experience</figcaption></figure>
-      </div>
-      <div class="reveal" id="rv-experience">
-        <div class="reveal-in">
-          <div class="rv"><h4>Content</h4><p>420 Sessions, comedy, music, adult animation and live events made for this room first.</p></div>
-          <div class="rv"><h4>Products</h4><p>Live drops from one dollar finds to collectibles, with member deals while the show runs.</p></div>
-          <div class="rv"><h4>Creators</h4><p>Your favorite creators making shows with us, not ads at you.</p></div>
-          <div class="rv"><h4>Community</h4><p>Live chat, member drops and rooms that feel like the function, not the feed.</p></div>
-          <div class="rv cta-col"><a class="btn sm" href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="world_experience_cta">Watch live + shop</a></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="world" id="w-connect" data-world="connect">
-      <div class="head">
-        <div class="idx serif">05</div>
-        <div>
-          <span class="yours-tag">Your room</span>
-          <h3>Come for the show. <em>Stay for the people.</em></h3>
-          <p class="wl">Watch parties, member rooms and a community that greets you by name.</p>
-          <button class="openbtn" data-open="connect" aria-expanded="false" aria-controls="rv-connect">Open this world</button>
-        </div>
-        <figure class="plate"><img src="assets/watch.jpg" alt="Friends on a couch sharing a triple screen night in a warm living room" loading="lazy"><figcaption class="ph">Connect</figcaption></figure>
-      </div>
-      <div class="reveal" id="rv-connect">
-        <div class="reveal-in">
-          <div class="rv"><h4>Content</h4><p>Watch parties, live premieres and member events where the chat is half the show.</p></div>
-          <div class="rv"><h4>Products</h4><p>Member merch and shared drops made to be split with your row.</p></div>
-          <div class="rv"><h4>Voices</h4><p>Hosts and members with real say. Founding voices help vote the slate into being.</p></div>
-          <div class="rv"><h4>Community</h4><p>Rooms by lane and city, and a wall where new members get welcomed on air.</p></div>
-          <div class="rv cta-col"><a class="btn sm" href="#reserve" data-track="world_connect_cta">Get early access</a></div>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- WATCH -->
-<section id="watch" aria-label="Watch live and shop">
-  <div class="band">
-    <div class="bg" role="img" aria-label="Friends on a couch watching a triple screen of surfing, plant wellness and meditation"></div>
-    <div class="shade" aria-hidden="true"></div>
-    <div class="wrap">
-      <span class="onair"><s></s>Live network</span>
-      <h2 style="max-width:640px">Watch it live. Shop it live. <em>Tonight.</em></h2>
-      <p class="lede">Live product drops and member deals. The show is the store and the store is the show.</p>
-      <div class="gate-ctas" style="margin-top:26px">
-        <a class="btn" href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="watch_primary">Watch live + shop</a>
-        <a class="btn ghost" href="#founding" data-track="watch_secondary">Reserve a founding seat</a>
-      </div>
-      <p class="micro">Streaming now on our live network home. It moves to thegreenroomnetwork.com this winter.</p>
+    <a class="brand" href="#top" aria-label="Greenroom TV"><img src="assets/logo-fast.png" alt="Greenroom TV"></a>
+    <div class="cta">
+      <span class="date"><i></i><span>Opens</span> Nov 25</span>
+      <button class="btn btn-ghost" data-open="seat">Free seat</button>
+      <button class="btn btn-gold" data-open="guild">The Guild <span class="tag">$1.99</span></button>
     </div>
   </div>
-</section>
-
-<!-- FOUNDING -->
-<section id="founding" aria-label="Founding class reservation">
-  <div class="bgroot" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="kick">Founding class of 1,000</div>
-    <h2>Hold your seat before <em>the doors open.</em></h2>
-    <p class="lede">One thousand founding seats. One small hold. The founding rate stays yours for life.</p>
-
-    <div class="found-grid">
-      <div class="ratecard">
-        <div class="rc-head"><span>Membership rate card</span><span>Winter 2026</span></div>
-        <div class="tier cross"><span class="tn">Members</span><span class="tp serif">$6.99<small>/mo</small></span><span class="stamp">Launch price</span></div>
-        <div class="tier cross"><span class="tn">Green Guild</span><span class="tp serif">$14.99<small>/mo</small></span><span class="stamp">Launch price</span></div>
-        <div class="tier hero"><span class="tn">Founding reservation</span><span class="tp serif">$1.99 <small>one time</small></span></div>
-        <ul class="perks">
-          <li><b>First month free</b> when the doors open.</li>
-          <li><b>Founding rate for life.</b> Announced before launch, guaranteed below the $6.99 public rate.</li>
-          <li><b>Your name on the Founding Wall</b> inside the network.</li>
-          <li><b>First access</b> to drops, live tapings and member events.</li>
-          <li><b>Refundable</b> any time before launch. No questions.</li>
-        </ul>
-        <p class="micro" style="padding:0 22px">The seat costs $1.99 and the first month it unlocks costs more than that. The math is not close.</p>
-        <div class="rc-cta">
-          <button class="btn" id="reserveBtn" data-track="reserve_open" style="width:100%">Reserve my founding seat · $1.99</button>
-          <p class="micro" style="text-align:center;margin-top:10px">First month free at launch. Refundable until the doors open.</p>
-          <p class="freeline">Not ready to hold a seat? <button type="button" id="freeJoin" class="linklike" data-track="free_open">Join the list free</button> and get the launch letter plus both member guides on the spot.</p>
-        </div>
-        <details class="tierpeek">
-          <summary>What those launch rates unlock</summary>
-          <div class="tp-grid">
-            <div>
-              <h5>Members · $6.99/mo</h5>
-              <ul>
-                <li>Fan Greenlight. Vote which originals and creator projects get made.</li>
-                <li>Two Guild Passes per release. Premieres and events, or combine them for a VIP drop.</li>
-                <li>Ad free in 4K on every device, shared with your household.</li>
-                <li>Early access to originals, first listen music and premieres.</li>
-                <li>Member pricing on drops, and Pay It Forward to gift a membership or fund a creator.</li>
-              </ul>
-            </div>
-            <div>
-              <h5>Green Guild · $14.99/mo or $149/yr · 21 and over, where legal</h5>
-              <ul>
-                <li>Everything in Members, plus the room behind the room.</li>
-                <li>Member only sessions and AMAs with athletes, artists and founders.</li>
-                <li>Monthly Green Box credit toward merch and wellness goods.</li>
-                <li>The daily 4:20 session and the 21 and over lounge.</li>
-                <li>Wellness drops at member pricing where legal, and creator verified recovery routines.</li>
-              </ul>
-            </div>
-          </div>
-          <p class="micro" style="padding:0 22px 16px">Founding seats sit under both rates for life. Voting power means members help own the direction, not just watch it.</p>
-        </details>
-      </div>
-      <div class="foundpass">
-        <img src="assets/card.jpg" alt="A black Greenroom founding member card with a gold leaf mark" loading="lazy">
-        <p class="fp-cap">The Founding Member pass. Numbered, permanent and never reissued after the first 1,000.</p>
-        <div class="seatline">
-          <span class="sn serif">1,000</span>
-          <span class="st">founding seats, first come. When the room fills, founding closes for good and launch pricing takes over.</span>
-        </div>
-        <p class="micro" style="margin-top:18px">Care about ownership? Founding members get the first invite if an ownership round ever opens. An expression of interest only. Nothing on this page is an offer of securities. No money is being solicited for any ownership round and none will be accepted.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VIBE -->
-<section id="vibe" aria-label="The sixty second vibe check">
-  <div class="bg" aria-hidden="true"></div>
-  <div class="wrap">
-    <div>
-      <div class="kick">Sixty seconds</div>
-      <h2>Take the Vibe Check. <em>Claim your $10.</em></h2>
-      <p class="lede">Tell us what you love and we build the network around it. Finish the Vibe Check and you are in the drawing for a $150 gift card.</p>
-      <div class="gate-ctas" style="margin-top:26px">
-        <a class="btn" href="survey.html" data-track="vibe_cta">Take the vibe check</a>
-      </div>
-      <p class="micro">NO PURCHASE NECESSARY. US residents 21 and over. One winner. Approximate retail value $150. Odds depend on eligible entries. <a href="rules.html">Official Rules</a>.</p>
-    </div>
-    <div class="credit-tile">
-      <div class="kick" style="justify-content:center">Finish and receive</div>
-      <div class="amt serif">$10 credit</div>
-      <div class="raf">plus one entry to win a $150 gift card at launch</div>
-    </div>
-  </div>
-</section>
-
-<!-- SLATE -->
-<section id="slate" aria-label="The programming slate">
-  <div class="wrap">
-    <div class="kick">The slate</div>
-    <h2>Programming with <em>a pulse.</em></h2>
-    <p class="lede">Originals made for this room first, with the culture in the writers room. Press play. This is real footage from the network opener.</p>
-    <div class="sessions">
-      <video src="assets/opener.mp4" poster="assets/culture.jpg" muted loop playsinline preload="metadata" id="openerVid" aria-label="The Greenroom network opener reel"></video>
-      <button class="vidbtn" id="vidBtn" data-track="opener_play">Play the opener</button>
-      <div class="cap"><b class="serif">The Greenroom opener</b><span>Cut from the network launch reel.</span></div>
-    </div>
-    <div class="slate-strip" aria-label="Greenroom originals">
-      <div>The Recovery Room<small>Original</small></div>
-      <div>Highly Questionable<small>Animated original</small></div>
-      <div>420 Sessions<small>Original · 21 and over</small></div>
-      <div>Second Wind<small>In development</small></div>
-      <div>The Long Table<small>In development</small></div>
-    </div>
-    <p class="legal-line">Artwork across this page is concept illustration only. No person depicted or named has endorsed or is affiliated with the Greenroom Network.</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" aria-label="Questions">
-  <div class="wrap">
-    <div class="kick">Questions</div>
-    <h2>Asked and <em>answered.</em></h2>
-    <div class="faq-list">
-      <details><summary>What is the Greenroom Network?</summary><p>A wellness entertainment network. Streaming shows, live shopping, recovery content and community in one room. Sports, culture, comedy and plant wellness for grown folks, side by side.</p></details>
-      <details><summary>When does it launch?</summary><p>Winter 2026. Founding members get in first, with previews and live tapings before the public doors open.</p></details>
-      <details><summary>What does the $1.99 reservation actually get me?</summary><p>Your first month free when the doors open. A founding rate for life below every public price, announced before launch and guaranteed below the $6.99 public rate. Your name on the Founding Wall and first access to drops and live tapings. The $1.99 is refundable any time before launch, and if you keep your seat it is credited to your first paid month after the free one. If the doors never open, every reservation is refunded automatically.</p></details>
-      <details><summary>What is the difference between the free list and a founding seat?</summary><p>The free list gets the launch letter, previews and first looks. A founding seat adds the first month free, the rate lock for life, the Founding Wall and first access to drops and tapings. Finishing the Vibe Check separately earns an Insider credit of $10 for the content store at launch.</p></details>
-      <details><summary>Do you sell cannabis on this site?</summary><p>No. This site sells nothing but a seat. Live drops feature legal goods only. Plant wellness content sits in a 21 and over lane.</p></details>
-      <details><summary>How does live shopping work?</summary><p>You watch the show. A product appears on screen. You tap it and it is yours. Products come from the people who make the shows, with member deals while the broadcast runs.</p></details>
-      <details id="rules-faq"><summary>How does the $150 gift card drawing work?</summary><p>Finish the Vibe Check before launch day and you are entered. One winner drawn at launch and notified by email. NO PURCHASE NECESSARY. Open to US residents 21 and over. Approximate retail value $150. Odds depend on the number of eligible entries. Read the <a href="rules.html">Official Rules</a>.</p></details>
-      <details><summary>Why does watching live take me to a different site right now?</summary><p>Greenroom programming streams on our live network home while thegreenroomnetwork.com finishes construction. Everything moves here when the doors open this winter. Your founding seat and credits carry over on day one.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSER -->
-<section id="closer" aria-label="Closing">
-  <div class="wrap">
-    <div class="kick">Winter 2026</div>
-    <p class="big">The room opens this winter. <em>The founding class opens now.</em></p>
-    <div class="trio">
-      <a class="btn" href="#reserve" data-track="closer_reserve">Reserve my founding seat · $1.99</a>
-      <a class="btn ghost" href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="closer_watch">Watch live + shop</a>
-      <a class="btn ghost" href="survey.html" data-track="closer_vibe">Take the vibe check</a>
-    </div>
-    <footer>
-      <div class="frow">
-        <span>© 2026 The Greenroom Network. All rights reserved.</span>
-        <div class="social"><span>INSTAGRAM</span><span>TIKTOK</span><span>@GREENROOMTV</span></div>
-      </div>
-      <p>21 and over for cannabis lanes. We never sell your information. NO PURCHASE NECESSARY for the gift card drawing, see the <a href="rules.html">Official Rules</a>. Artwork is concept illustration only. No person depicted or named has endorsed or is affiliated with the Greenroom Network. <a href="legal.html">Privacy, Terms and Refunds</a>.</p>
-    </footer>
-  </div>
-</section>
-
-</main>
-
-<!-- persistent dock -->
-<nav class="dock" id="dock" aria-label="Quick actions">
-  <a class="prime" href="#reserve" data-track="dock_reserve" id="dockAccess"><span class="full">Reserve a founding seat · $1.99</span><span class="short">Reserve $1.99</span></a>
-  <a href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="dock_watch"><span class="full">Watch live + shop</span><span class="short">Watch</span></a>
-  <a href="survey.html" data-track="dock_vibe"><span class="full">Take the vibe check</span><span class="short">Vibe check</span></a>
 </nav>
 
-<!-- ticker -->
-<div class="tickerbar" aria-hidden="true"><div class="ticker" id="ticker"></div></div>
+<header class="hero" id="top">
+  <div class="bg" id="heroBg"></div><div class="shade"></div><div class="grain"></div>
+  <div class="wrap inner">
+    <span class="kick"><b>Live</b> November 25, 2026</span>
+    <span class="setup">Everybody's invited.</span>
+    <h1>Welcome to the room<br><span class="g">behind the room.</span></h1>
+    <p class="say">Film, music, comedy, sport and live shopping. Free to watch, and <b class="gd">$1.99 locks your founding rate for life.</b></p>
+    <div class="cd-wrap">
+      <div class="countdown" data-cd>
+        <div class="unit"><div class="num" data-d>00</div><div class="lbl">Days</div></div>
+        <div class="unit"><div class="num" data-h>00</div><div class="lbl">Hours</div></div>
+        <div class="unit"><div class="num" data-m>00</div><div class="lbl">Minutes</div></div>
+        <div class="unit"><div class="num" data-s>00</div><div class="lbl">Seconds</div></div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary lg" data-open="seat">Reserve my free seat</button>
+      <button class="btn btn-gold lg" data-open="guild">Join the Guild <span class="tag">$1.99</span></button>
+    </div>
+    <div class="trustrow">
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured by Stripe</span>
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>PCI DSS Level 1</span>
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Refundable before launch</span>
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>No spam, unsubscribe anytime</span>
+    </div>
+    <div class="paychips">
+      <span class="chip visa">VISA</span><span class="chip mc"><i></i><i></i></span><span class="chip amex">AMEX</span>
+      <span class="chip disc">DISCOVER</span><span class="chip apay">Apple&nbsp;Pay</span><span class="chip gpay">G&nbsp;Pay</span>
+      <span class="chip pp">PayPal</span><span class="chip link">link</span><span class="chip cash">Cash&nbsp;App</span>
+    </div>
+    <div class="backed"><span><i></i>Backed by <b>venture capital</b></span><span><i></i><b>Professional athletes</b></span><span><i></i><b>Wellness experts</b></span></div>
+  </div>
+</header>
 
-<!-- survey side box -->
-<aside class="vibebox" id="vibebox" aria-label="The sixty second vibe check">
-  <button class="vx" id="vibeX" aria-label="Dismiss">×</button>
-  <div class="vk"><s></s>Sixty seconds</div>
-  <p>Tell us your vibe and we build the network around it. <b>$10 credit</b> plus a <b>$150 gift card entry</b> when you finish.</p>
-  <a class="go" href="survey.html" data-track="vibebox_start">Start the vibe check</a>
-</aside>
+<section class="band">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="wrap inner rv">
+    <span class="pill"><i></i>Live on Greenroom</span>
+    <h2>The best seat <span class="g">in the house.</span></h2>
+    <p class="lede">No line, no list, no leaving. The room comes to you the night it opens.</p>
+    <div class="actions"><button class="btn btn-primary" data-open="seat">Reserve my free seat</button></div>
+  </div>
+</section>
 
-<!-- exit nudge -->
-<div class="nudge" id="nudge" role="dialog" aria-label="Before you go">
-  <span id="nudgeMsg">Before you go: <b>the launch letter is free.</b></span>
-  <input class="field nudgefield" id="nudgeEmail" type="email" placeholder="Your email" aria-label="Email for the launch letter">
-  <button class="go" id="nudgeGo">Send it</button>
-  <span class="nudge-alt">$1.99 adds your first month free. <a href="#reserve" id="nudgeSeat">Hold a seat</a></span>
-  <button class="nx" id="nudgeX" aria-label="Dismiss">×</button>
+<section class="capture" id="seat">
+  <div class="wrap">
+    <div class="card rv" id="captureCard">
+      <div class="pre">
+        <span class="eyebrow">Be first through the door</span>
+        <h2>Request your <span class="g">invitation.</span></h2>
+        <p>One line holds your founding seat and starts the newsletter. No card, no charge, and the founding rate stays yours if you upgrade later.</p>
+        <form class="email" data-form="seat">
+          <input type="email" name="email" placeholder="Enter your email" required autocomplete="email" inputmode="email" spellcheck="false">
+          <button class="btn btn-primary" type="submit">Reserve my seat</button>
+        </form>
+        <div class="fine">Free forever. Unsubscribe in one tap.</div>
+      </div>
+      <div class="done">
+        <h3>Your seat is <span class="g">held.</span></h3>
+        <p>The newsletter starts now. Both publications live inside the Guild, and $1.99 opens them today.</p>
+        <div class="row">
+          <button class="btn btn-gold" data-open="guild">Unlock both books $1.99</button>
+          <button class="btn btn-ghost" data-open="shape">Shape the room</button>
+          <button class="btn btn-ghost" data-share>Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locked">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow gold">The room is filling up</span>
+      <h2>The guest list <span class="g">is sealed.</span></h2>
+      <p>Seventeen doors. Athletes, actors, artists, comedians, producers, wellness voices and creators are behind them. Each one opens as the clock runs down.</p>
+    </div>
+    <div class="vault rv" id="vault"></div>
+    <div class="foot rv"><button class="btn btn-primary lg" data-open="seat">Be there when they drop</button></div>
+  </div>
+</section>
+
+<section class="index" id="network">
+  <div class="wrap">
+    <div class="irow rv" data-irow>
+      <button class="ihead" data-itoggle aria-expanded="false">
+        <span class="ttl"><h2>The <span class="g">Network</span></h2><span class="sub">The room the culture walks into when the cameras stop. Now it keeps a schedule.</span></span>
+        <span class="op"><span>Open</span><b>+</b></span>
+      </button>
+      <div class="ipanel">
+        <div class="in">
+          <div class="shot"><img src="assets/network.jpg" alt="A family on the sofa browsing the Greenroom Network channel guide on their television to pick a film" loading="lazy" width="1120" height="700"></div>
+          <div>
+            <p class="lede">Streaming where entertainment, wellness and culture share one address, and the best of it is shoppable while it plays.</p>
+            <ul>
+              <li>Original film, series and late night</li>
+              <li>Live rooms with a host, a chat and a shelf</li>
+              <li>Music, comedy and sport from people you already follow</li>
+              <li>A free tier on day one, with more behind the Guild</li>
+            </ul>
+            <div class="libcta" style="margin-top:1.2rem"><button class="btn btn-primary" data-open="seat">Reserve my free seat</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="library" id="library">
+  <div class="wrap lib">
+    <div class="shelf rv">
+      <div class="vol"><span class="badge21">21+</span><img src="assets/cover-pairing.jpg" alt="Well Paired, the Greenroom Pairing Guide 2026 edition" loading="lazy"></div>
+      <div class="vol v2"><span class="badge21">21+</span><img src="assets/cover-wedge.jpg" alt="The Wedge 2026, the state of cannabis wellness, fitness and culture" loading="lazy"></div>
+      <span class="locktag"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#d8b45c" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Inside the Guild</span>
+    </div>
+    <div class="rv">
+      <span class="eyebrow gold">The Greenroom Library</span>
+      <h2>Read the room <span class="g">before it opens.</span></h2>
+      <p class="lede">A pairing system for every moment, and the annual report on where cannabis wellness goes next. One of them carries the November date that resets half the shelf.</p>
+      <div class="editors"><span class="dots"><i></i><i></i></span>Written by Stephanie Arakel and Dr. Lori Shemek, Greenroom experts</div>
+      <div class="libcta">
+        <button class="btn btn-gold lg" data-open="guild">Unlock both publications $1.99</button>
+        <button class="btn btn-ghost" data-open="seat">Just the free seat</button>
+      </div>
+      <div class="fine">Both volumes release the moment your Guild membership clears. Written for adults 21 and over.</div>
+    </div>
+  </div>
+</section>
+
+<section class="guild" id="guild">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="wrap in rv">
+    <span class="eyebrow gold">Membership</span>
+    <h2>The <span class="g">Green Guild.</span></h2>
+    <p class="lede">The seat is free and gets you the free tier plus the newsletter. The Guild is the chair by the screen, once, for less than a coffee.</p>
+    <div class="price"><span class="n">$1.99</span><span class="k">One time, then grandfathered</span></div>
+    <div class="perks">
+      <div><span><b>Both publications</b> released on confirmation</span></div>
+      <div><span><b>Founding rate held for life</b>, subject to the membership terms</span></div>
+      <div><span><b>A vote on what gets greenlit</b>, members help pick what we make next <span class="soon">Coming soon</span></span></div>
+      <div><span><b>First seats when a Greenroom film reaches theatres</b> <span class="soon">Coming soon</span></span></div>
+      <div><span><b>Member drops and deals</b>, including the first exclusive drop</span></div>
+      <div><span><b>Early access</b> before the public doors open</span></div>
+    </div>
+    <div class="libcta" style="margin-top:1rem"><button class="btn btn-gold lg" data-open="guild">Join the Guild</button></div>
+    <div class="paychips" style="justify-content:flex-start;margin-top:.7rem">
+      <span class="chip visa">VISA</span><span class="chip mc"><i></i><i></i></span><span class="chip amex">AMEX</span>
+      <span class="chip apay">Apple&nbsp;Pay</span><span class="chip gpay">G&nbsp;Pay</span><span class="chip link">link</span>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="join">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="wrap inner rv">
+    <span class="eyebrow">Your invitation is here</span>
+    <h2>November 25. <span class="gd">The room opens.</span></h2>
+    <div class="cd-wrap">
+      <div class="countdown" data-cd>
+        <div class="unit"><div class="num" data-d>00</div><div class="lbl">Days</div></div>
+        <div class="unit"><div class="num" data-h>00</div><div class="lbl">Hours</div></div>
+        <div class="unit"><div class="num" data-m>00</div><div class="lbl">Minutes</div></div>
+        <div class="unit"><div class="num" data-s>00</div><div class="lbl">Seconds</div></div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary lg" data-open="seat">Reserve my free seat</button>
+      <button class="btn btn-gold lg" data-open="guild">Join the Guild $1.99</button>
+    </div>
+    <div class="trustrow">
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secured by Stripe</span>
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Refundable before launch</span>
+      <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>Your card never touches our servers</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div class="logos"><img src="assets/logo-fast.png" alt="Greenroom TV"><img src="assets/logo-live.png" alt="Greenroom TV Live Shopping"></div>
+      <div class="links">
+        <a href="#" data-share>Share</a>
+        <a href="https://www.instagram.com/joannhuizar/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@clubannabella" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://x.com/garyhgoodridge?lang=en" target="_blank" rel="noopener">X</a>
+        <a href="legal.html#privacy">Privacy</a>
+        <a href="legal.html#terms">Terms</a>
+        <a href="legal.html#refunds">Refunds</a>
+        <span class="hidden-door" data-open="door" title="Members preview">Greenroom TV</span>
+      </div>
+    </div>
+    <p class="legal">Greenroom TV is operated by Greenroom Network LLC, with Greenroom Radio LLC as an affiliated company. A founding seat is free and includes the free tier at launch. The Green Guild is a one time $1.99 charge that releases both publications and holds the founding rate, subject to the membership terms. Names behind the sealed doors are published only once confirmed. The Greenroom Library is written for adults 21 and over and is provided for education and general interest, not medical advice. thegreenroomnetwork.com</p>
+  </div>
+</footer>
+
+<div class="stick" id="stick">
+  <button class="btn btn-ghost" data-open="seat">Free seat</button>
+  <button class="btn btn-gold" data-open="guild">Guild $1.99</button>
 </div>
 
-<!-- reservation modal -->
-<div class="modal-back" id="modalBack" role="dialog" aria-modal="true" aria-label="Reserve your founding seat">
-  <div class="modal">
-    <button class="mx" id="modalX" aria-label="Close">×</button>
-    <div class="m-form" id="mForm">
-      <div class="mk" id="mKick">Founding reservation · $1.99</div>
-      <h3 id="mTitle">Hold your founding seat</h3>
-      <p class="msub" id="mSub">Ten seconds. Refundable any time before launch.</p>
-      <p class="upline" id="upLine" style="display:none">Reserving as <b id="upEmail"></b> <button type="button" class="linklike" id="upChange">change</button></p>
-      <input class="field" id="fName" placeholder="First name" autocomplete="given-name" aria-label="First name">
-      <input class="field" id="fEmail" placeholder="Email" type="email" autocomplete="email" required aria-label="Email">
-      <p class="err" id="errEmail" role="alert">Enter a valid email so we can reach you.</p>
-      <input class="field" id="fPhone" placeholder="Mobile (optional)" type="tel" autocomplete="tel" aria-label="Mobile number, optional">
-      <label class="check" id="smsRow"><input type="checkbox" id="fSms"> Text me launch updates. Optional, never a condition of any purchase.</label>
-      <label class="check"><input type="checkbox" id="fAge"> I confirm I am 21 or older.</label>
-      <p class="err" id="errAge" role="alert">Please confirm you are 21 or older.</p>
-      <label class="check" id="ownRow"><input type="checkbox" id="fOwn"> Send me the first invite if an ownership round ever opens. An expression of interest only. No money is being solicited for any ownership round and none will be accepted.</label>
-      <button class="btn" id="mSubmit" data-track="reserve_submit">Hold my seat</button>
-      <p class="freeline" id="justLetterRow" style="text-align:center;margin-top:12px">Not ready? <button type="button" class="linklike" id="justLetter" data-track="downgrade_letter">Just send me the launch letter</button></p>
-      <p class="consent">By joining you agree to receive marketing email from the Greenroom Network. Unsubscribe any time. Launch texts arrive only if you check the text box above. Message frequency varies. Message and data rates may apply. Reply STOP to cancel, HELP for help. We never sell your information. Nothing on this page is an offer of securities. <a href="legal.html">Privacy and Terms</a>.</p>
-    </div>
-    <div class="m-success" id="mSuccess">
-      <div class="badge"><div class="shine"></div><div class="lbl serif" id="badgeLbl">Greenroom<br>Founding<br>Member</div></div>
-      <h3 class="serif" id="successTitle">You are on the wall.</h3>
-      <p class="msub" id="successNote">Your seat is held. Watch your inbox for your founding confirmation.</p>
-      <div class="bookrow" id="bookRow">
-        <a href="assets/well-paired.pdf" target="_blank" rel="noopener" data-track="dl_wellpaired">Well Paired · pairing guide</a>
-        <a href="assets/the-wedge.pdf" target="_blank" rel="noopener" data-track="dl_wedge">The Wedge · annual report</a>
+<button class="cg-launch" id="cgLaunch" aria-label="Open the Greenroom concierge">
+  <span class="av"><span></span></span>Ask the concierge
+</button>
+<aside class="cg" id="cg" role="dialog" aria-label="Greenroom concierge">
+  <div class="top">
+    <span class="av"></span>
+    <span><span class="nm">Greenroom Concierge</span><br><span class="st">On the door</span></span>
+    <button id="cgClose" aria-label="Close concierge">×</button>
+  </div>
+  <div class="body" id="cgBody"></div>
+  <div class="qr" id="cgQr"></div>
+</aside>
+
+<aside class="survey" id="survey" hidden>
+  <button class="close" data-survey-no aria-label="Dismiss">×</button>
+  <span class="k">Founding members only</span>
+  <h4>Shape the Room</h4>
+  <span class="qbadge"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9 questions · about 60 seconds</span>
+  <p>A short survey. Nine questions decide what we build first, and founding answers get weighted.</p>
+  <div class="row">
+    <button class="btn btn-primary" data-open="shape">Take the survey</button>
+    <span class="no" data-survey-no>Later</span>
+  </div>
+</aside>
+
+<div class="modal" id="m-seat" role="dialog" aria-modal="true" aria-labelledby="ms-t">
+  <div class="box">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="stage on" data-stage="form">
+      <span class="eyebrow">Founding seat, free</span>
+      <h3 id="ms-t">Keep your place <span class="g">in line.</span></h3>
+      <p class="sub">One line holds your seat and starts the newsletter until the doors open. No card, no charge.</p>
+      <form data-form="seat">
+        <input type="email" name="email" placeholder="Email" required autocomplete="email" inputmode="email" spellcheck="false">
+        <button class="btn btn-primary" type="submit">Reserve my free seat</button>
+      </form>
+      <div class="trustrow" style="justify-content:flex-start;margin-top:.8rem">
+        <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>No spam</span>
+        <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Free forever</span>
+        <span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Never sold</span>
       </div>
-      <div class="sharebox">Skip the launch line. Share your door with two friends:<br><b id="shareLink"></b></div>
-      <button class="btn" id="shareBtn" data-track="share">Share the Greenroom</button>
-      <p class="micro"><a href="https://stokednetwork.com" target="_blank" rel="noopener" data-track="success_watch">Or step into the live room now</a></p>
     </div>
+    <div class="stage" data-stage="done">
+      <span class="eyebrow">Confirmed</span>
+      <h3>Your seat is <span class="g">held.</span></h3>
+      <p class="sub">The newsletter starts now. Both publications sit inside the Guild, and $1.99 opens them today plus holds your founding rate for life.</p>
+      <div style="display:grid;gap:.55rem;margin-top:1.1rem">
+        <button class="btn btn-gold" data-open="guild">Unlock both books for $1.99</button>
+        <button class="btn btn-ghost" data-open="shape">Shape the room</button>
+      </div>
+      <div class="declines"><button data-close>Maybe later</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-guild" role="dialog" aria-modal="true" aria-labelledby="mf-t">
+  <div class="box">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="stage on" data-stage="pay">
+      <div class="co-head">
+        <div>
+          <span class="eyebrow gold">The Green Guild</span>
+          <h3 id="mf-t" style="margin-bottom:.2rem">Unlock <span class="g">both books.</span></h3>
+        </div>
+        <div class="co-price"><div class="n">$1.99</div><div class="k">One time</div></div>
+      </div>
+      <div class="unlockrow">
+        <figure><img src="assets/cover-pairing.jpg" alt="Well Paired, volume one" loading="lazy"><figcaption>Well Paired</figcaption></figure>
+        <figure><img src="assets/cover-wedge.jpg" alt="The Wedge 2026, volume two" loading="lazy"><figcaption>The Wedge</figcaption></figure>
+        <figure class="gift"><img src="assets/giftbox.jpg" alt="The founding member drop" loading="lazy"><figcaption>Founding drop</figcaption></figure>
+      </div>
+      <div class="getlist">
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Both publications</b> released the second this clears</span></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Founding rate held for life</b>, you never pay a rise</span></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>A vote on what gets greenlit</b>, plus first seats when a Greenroom film reaches theatres</span></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Member drops and deals</b>, including the first exclusive drop</span></div>
+        <div><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span><b>Early access</b> before the public doors open</span></div>
+      </div>
+      <div id="expressMount"></div>
+      <div id="buyBtnMount"></div>
+      <div class="ordiv" id="orDiv">or pay by card</div>
+      <form data-form="card">
+        <input type="email" name="email" placeholder="Email for your receipt and books" required autocomplete="email" inputmode="email" spellcheck="false">
+        <div id="cardMount">
+          <div class="cardbox" id="cardScaffold">
+            <div class="hd"><span>Card details</span><span class="lk"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Encrypted by Stripe</span></div>
+            <div class="cardrow">
+              <input inputmode="numeric" placeholder="1234 1234 1234 1234" aria-label="Card number" readonly>
+              <span class="mini"><span class="chip visa">VISA</span><span class="chip mc"><i></i><i></i></span><span class="chip amex">AMEX</span></span>
+            </div>
+            <div class="cardsplit">
+              <div class="cardrow"><input inputmode="numeric" placeholder="MM / YY" aria-label="Expiry" readonly></div>
+              <div class="cardrow"><input inputmode="numeric" placeholder="CVC" aria-label="Security code" readonly></div>
+              <div class="cardrow"><input inputmode="numeric" placeholder="ZIP" aria-label="Postal code" readonly></div>
+            </div>
+          </div>
+          <div class="opnote" id="opNote">Secure card fields switch on the moment Stripe is connected. Nothing typed here is stored or sent.</div>
+        </div>
+        <div class="err" id="cardErr"></div>
+        <button class="btn btn-gold paybtn" type="submit" id="payBtn">Pay $1.99 and unlock both books</button>
+      </form>
+      <div id="altPay" class="altpay"></div>
+      <div class="paychips" style="margin-top:.7rem">
+        <span class="chip visa">VISA</span><span class="chip mc"><i></i><i></i></span><span class="chip amex">AMEX</span>
+        <span class="chip disc">DISCOVER</span><span class="chip apay">Apple&nbsp;Pay</span><span class="chip gpay">G&nbsp;Pay</span><span class="chip link">link</span>
+      </div>
+      <div class="guarantee">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <p><b>Refundable any time before launch.</b> Payments run on Stripe, a PCI DSS Level 1 processor. Card details go straight to Stripe and never touch our servers.</p>
+      </div>
+      <div class="declines"><button data-open="seat">No thanks, keep my free seat</button></div>
+    </div>
+    <div class="stage" data-stage="done">
+      <span class="eyebrow">Welcome to the Guild</span>
+      <h3>The chair is <span class="g">yours.</span></h3>
+      <p class="sub" id="guildMsg">Founding rate held for life. Both volumes are open below.</p>
+      <div class="dl" id="booksBlock" hidden>
+        <a href="assets/well-paired.pdf" target="_blank" rel="noopener"><div><b>Well Paired</b><span>Volume 01 · 21+</span></div><span class="get">Open PDF</span></a>
+        <a href="assets/the-wedge.pdf" target="_blank" rel="noopener"><div><b>The Wedge 2026</b><span>Volume 02 · 21+</span></div><span class="get">Open PDF</span></a>
+      </div>
+      <div class="pending" id="pendingBlock" hidden><b>The volumes unlock the second the payment clears.</b> Your place and the founding rate are already held, and the books open here and land in your inbox as soon as it settles.</div>
+      <div style="display:grid;gap:.55rem;margin-top:1.1rem">
+        <button class="btn btn-ghost" data-open="shape">Shape the room</button>
+        <button class="btn btn-ghost" data-share>Bring someone</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-shape" role="dialog" aria-modal="true" aria-labelledby="mc-t">
+  <div class="box wide">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow">Founding members only</span>
+    <h3 id="mc-t">Shape the <span class="g">room.</span></h3>
+    <span class="qbadge"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9 questions · about 60 seconds</span>
+    <p class="sub" style="margin:.6rem 0 1rem">A short survey. Your answers decide what we build first, and founding answers get weighted.</p>
+    <div id="surveyHolder"><iframe id="surveyFrame" title="Shape the Room" loading="lazy"></iframe></div>
+    <a class="btn btn-primary" id="surveyOut" href="#" target="_blank" rel="noopener" style="margin-top:.7rem;display:none">Open the survey in a new tab</a>
+    <div class="small" style="margin-top:.6rem">Answers go to the Greenroom programming board.</div>
+  </div>
+</div>
+
+<div class="modal" id="m-email" role="dialog" aria-modal="true" aria-labelledby="me-t">
+  <div class="box" style="width:min(460px,100%)">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow gold">Founding members only</span>
+    <h3 id="me-t">A short survey. <span class="g">Nine questions.</span></h3>
+    <span class="qbadge"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9 questions · about 60 seconds</span>
+    <p class="sub" style="margin-top:.6rem">Shape the Room decides what we build first. Founding answers get weighted, and you can leave your email at the end to hold your seat.</p>
+    <div style="display:grid;gap:.55rem;margin-top:1.1rem">
+      <button class="btn btn-primary" data-open="shape">Take the survey</button>
+      <button class="btn btn-gold" data-open="guild">Or join the Guild $1.99</button>
+    </div>
+    <div class="declines"><button data-close>Not right now</button></div>
+  </div>
+</div>
+
+<div class="modal" id="m-exit" role="dialog" aria-modal="true" aria-labelledby="mx-t">
+  <div class="box">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow gold">One moment</span>
+    <h3 id="mx-t">The doors close <span class="g">on the rate.</span></h3>
+    <p class="sub">The seat stays free. The $1.99 founding rate is only held for people who join before launch.</p>
+    <div style="display:grid;gap:.55rem;margin-top:1.1rem">
+      <button class="btn btn-gold" data-open="guild">Hold my founding rate $1.99</button>
+      <button class="btn btn-ghost" data-open="seat">Just the free seat</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-door" role="dialog" aria-modal="true" aria-labelledby="md-t">
+  <div class="box" style="width:min(400px,100%)">
+    <button class="x" data-close aria-label="Close">×</button>
+    <span class="eyebrow gold">Private</span>
+    <h3 id="md-t">Members <span class="g">preview.</span></h3>
+    <p class="sub">This door is not open to the public yet. Enter the access code.</p>
+    <form data-form="door">
+      <input type="text" name="code" placeholder="Access code" autocomplete="off" spellcheck="false">
+      <div class="err" id="doorErr"></div>
+      <button class="btn btn-gold" type="submit">Enter</button>
+    </form>
   </div>
 </div>
 
 <script>
-/* ============ CONFIG: wire these before flipping DNS ============ */
-var CONFIG = {
-  STRIPE_LINK: "",            /* paste the $1.99 Stripe Payment Link here */
-  FORM_ENDPOINT: "",          /* optional: form relay endpoint (Formspree, Make webhook) */
-  SURVEY: "survey.html"
+/* ===========================================================================
+   PAYMENTS: fill ONE of these and the checkout goes live. Full guide: PAYMENTS.md
+     Fastest, no server (~2 min):  STRIPE_LINK      = https://buy.stripe.com/...
+     Card fields on our page:      STRIPE_PK + STRIPE_BUY_BUTTON_ID
+     Best conversion, needs server: STRIPE_PK + INTENT_URL
+   Set the Stripe success url to  https://thegreenroomnetwork.com/?paid=1
+   so returning buyers unlock the books automatically.
+   =========================================================================== */
+const CFG={
+  LAUNCH:'2026-11-25T00:00:00-05:00',
+  FORM_ENDPOINT:'',
+  /* --- PAYMENTS: fill ONE of these three and the checkout is live --- */
+  STRIPE_PK:'',              // pk_live_... (needed for both inline options)
+  STRIPE_BUY_BUTTON_ID:'',   // buy_btn_... NO BACKEND. Fastest way live.
+  INTENT_URL:'',             // your endpoint -> {clientSecret}. Best UX, needs a server.
+  STRIPE_LINK:'',            // https://buy.stripe.com/... NO BACKEND, redirects out.
+  PAYPAL_LINK:'',            // optional PayPal checkout url
+  CRYPTO_LINK:'',            // optional Coinbase Commerce url
+  JOTFORM_ID:'',            // either the bare form id (e.g. 250123456789012)
+  JOTFORM_URL:'',           // ...or paste the whole form link, e.g. https://form.jotform.com/2501234...
+  SURVEY_FALLBACK:'survey/',// the 60 Second Vibe Check, used when no Jotform link is set
+  PREVIEW_URL:'https://stokednetwork.com',
+  PREVIEW_CODE:'11.05.26',
+  SITE:'https://thegreenroomnetwork.com/',
+  EMAIL_POPUP_SECONDS:60,
+  EMAIL_POPUP_MAX:3
 };
-/* =============================================================== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 
-var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (reduced) document.documentElement.setAttribute("data-motion","off");
-
-/* analytics stub: every tracked tap lands in dataLayer for GTM later */
-window.dataLayer = window.dataLayer || [];
-function grTrack(ev, data){
-  var row = Object.assign({event:"gr_"+ev, path: document.documentElement.getAttribute("data-path")||"none", t: Date.now()}, data||{});
-  window.dataLayer.push(row);
-  try{ var log = JSON.parse(localStorage.getItem("gr_events")||"[]"); log.push(row); localStorage.setItem("gr_events", JSON.stringify(log.slice(-400))); }catch(e){}
+const target=new Date(CFG.LAUNCH).getTime();
+function tick(){
+  const d=Math.max(0,target-Date.now());
+  const v={d:Math.floor(d/864e5),h:Math.floor(d%864e5/36e5),m:Math.floor(d%36e5/6e4),s:Math.floor(d%6e4/1e3)};
+  $$('[data-cd]').forEach(c=>{for(const k of ['d','h','m','s']){
+    const el=c.querySelector('[data-'+k+']'),nv=String(v[k]).padStart(2,'0');
+    if(el.textContent!==nv){el.textContent=nv;el.classList.add('flip');setTimeout(()=>el.classList.remove('flip'),240);}
+  }});
 }
-document.addEventListener("click", function(e){
-  var el = e.target.closest("[data-track]");
-  if (el) grTrack(el.getAttribute("data-track"));
-});
+tick();setInterval(tick,1000);
 
-/* UTM capture + passthrough to the live network and survey */
 (function(){
-  var qs = new URLSearchParams(location.search);
-  var keep = ["utm_source","utm_medium","utm_campaign","utm_content","ref"];
-  try{
-    var stored = JSON.parse(localStorage.getItem("gr_utm")||"{}");
-    keep.forEach(function(k){ if(qs.get(k)) stored[k]=qs.get(k); });
-    if(!stored.landed) stored.landed = new Date().toISOString();
-    localStorage.setItem("gr_utm", JSON.stringify(stored));
-  }catch(e){}
-  var carry = new URLSearchParams();
-  keep.forEach(function(k){ if(qs.get(k)) carry.set(k, qs.get(k)); });
-  if(!carry.get("utm_source")) carry.set("utm_source","thegreenroomnetwork");
-  if(!carry.get("utm_campaign")) carry.set("utm_campaign","founding1000");
-  document.querySelectorAll('a[href^="https://stokednetwork.com"], a[href^="survey.html"]').forEach(function(a){
-    var u = a.getAttribute("href").split("?");
-    var p = new URLSearchParams(u[1]||"");
-    carry.forEach(function(v,k){ if(!p.get(k)) p.set(k,v); });
-    a.href = u[0] + "?" + p.toString();
-  });
+  const cats=['Athlete','Creator','Actor','Artist','Comedian','Producer','Wellness','Athlete','Cannabis','Creator','Actor','Producer','Comedian','Artist','Wellness','Athlete','Creator'];
+  const lock='<svg class="lock" viewBox="0 0 24 24" fill="none" stroke="#d8b45c" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
+  $('#vault').innerHTML=cats.map(c=>`<div class="cell"><span class="day">?</span>${lock}<span class="q">?</span><span class="cat">${c}</span></div>`).join('');
 })();
 
-/* ticker */
-(function(){
-  var items = ["420 Sessions","Highly Questionable","The Recovery Room","Live drops every week","Second Wind, in development","The Long Table, in development","Founding class of 1,000 now open","Doors open Winter 2026"];
-  var html = items.map(function(t,i){ return '<span class="'+(i%3===0?"g":"")+'">'+t+"</span>"; }).join("");
-  document.getElementById("ticker").innerHTML = html + html;
-})();
+$$('[data-itoggle]').forEach(b=>b.addEventListener('click',()=>{
+  const row=b.closest('[data-irow]'),open=row.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+  b.querySelector('.op span').textContent=open?'Close':'Open';
+}));
 
-/* timecode */
-(function(){
-  var el = document.getElementById("timecode"); if(!el || reduced) return;
-  var f=0; setInterval(function(){ f=(f+1)%30;
-    var d=new Date(), p=function(n){return String(n).padStart(2,"0")};
-    el.textContent="REC "+p(d.getHours())+":"+p(d.getMinutes())+":"+p(d.getSeconds())+":"+p(f);
-  },66);
-})();
+addEventListener('scroll',()=>{
+  $('#nav').classList.toggle('scrolled',scrollY>40);
+  $('#stick').classList.toggle('on',scrollY>innerHeight*.85);
+  if(!$('#cg').classList.contains('on'))$('#cgLaunch').classList.toggle('on',scrollY>innerHeight*.5);
+  $('#heroBg').style.transform=`translateY(${Math.min(scrollY,innerHeight)*.16}px) scale(1.08)`;
+},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+$$('.rv').forEach(el=>io.observe(el));
 
-/* sparkle field */
-(function(){
-  if (reduced) return;
-  var c=document.getElementById("sparkle"), x=c.getContext("2d");
-  function size(){ c.width=innerWidth; c.height=innerHeight; } size(); addEventListener("resize",size);
-  var stars=Array.from({length:40},function(){ return {x:Math.random(),y:Math.random(),r:Math.random()*1.3+.3,p:Math.random()*6.28,sp:Math.random()*.02+.006}; });
-  (function draw(){ x.clearRect(0,0,c.width,c.height);
-    stars.forEach(function(s){ s.p+=s.sp; var a=(Math.sin(s.p)+1)/2*.55;
-      x.beginPath(); x.arc(s.x*c.width,s.y*c.height,s.r,0,6.28);
-      x.fillStyle="rgba(232,207,138,"+a.toFixed(2)+")"; x.fill(); });
-    requestAnimationFrame(draw); })();
-})();
-
-/* identity engine */
-var doorCopy = {
-  recover:{note:"Good choice. The Recovery Room is yours. Start with the Vibe Check and we tune it to you.", dock:"Claim early access", world:"w-recover"},
-  perform:{note:"Respect. The athletes kept your seat warm. Early access gets you into the first live tapings.", dock:"Get early access", world:"w-perform"},
-  experience:{note:"Say less. The culture channel is loading. Watch live and shop the first drops.", dock:"Get early access", world:"w-experience"},
-  connect:{note:"Pull up. The community rooms open to founding members first.", dock:"Join the founding class", world:"w-connect"}
-};
-document.querySelectorAll(".door").forEach(function(d){
-  d.addEventListener("click", function(){
-    var k=d.getAttribute("data-door");
-    document.querySelectorAll(".door").forEach(function(n){n.classList.remove("sel")});
-    d.classList.add("sel");
-    document.documentElement.setAttribute("data-path",k);
-    try{ localStorage.setItem("gr_path",k); }catch(e){}
-    var c=doorCopy[k];
-    document.getElementById("doorNote").textContent=c.note;
-    document.querySelectorAll(".world").forEach(function(w){w.classList.remove("yours")});
-    var w=document.getElementById(c.world); w.classList.add("yours");
-    w.parentNode.insertBefore(w, w.parentNode.firstChild);
-    grTrack("door_"+k);
-    setTimeout(function(){ document.getElementById("worlds").scrollIntoView({behavior:reduced?"auto":"smooth"}); }, 450);
-  });
-});
-try{ var saved=localStorage.getItem("gr_path"); if(saved && doorCopy[saved]){ var btn=document.querySelector('.door[data-door="'+saved+'"]'); if(btn){ btn.classList.add("sel"); document.documentElement.setAttribute("data-path",saved); document.getElementById("doorNote").textContent="Welcome back. Your door is still open."; } } }catch(e){}
-
-/* world reveal */
-document.querySelectorAll(".openbtn").forEach(function(b){
-  b.addEventListener("click", function(){
-    var k=b.getAttribute("data-open"), rv=document.getElementById("rv-"+k);
-    var open = rv.style.maxHeight && rv.style.maxHeight!=="0px";
-    if(open){ rv.style.maxHeight="0px"; b.textContent="Open this world"; b.setAttribute("aria-expanded","false"); }
-    else{ rv.style.maxHeight=rv.scrollHeight+"px"; b.textContent="Close this world"; b.setAttribute("aria-expanded","true"); grTrack("world_open_"+k); }
-  });
-});
-
-/* dock visibility */
-(function(){
-  var dock=document.getElementById("dock"), gate=document.getElementById("gate");
-  addEventListener("scroll", function(){
-    var past = scrollY > gate.offsetHeight*.7;
-    var nearEnd = (innerHeight+scrollY) > document.body.scrollHeight-300;
-    dock.classList.toggle("on", past && !nearEnd && !document.getElementById("modalBack").classList.contains("on"));
-  }, {passive:true});
-})();
-
-/* reservation modal */
-var modalBack=document.getElementById("modalBack"), mode="paid";
-var modalCopy={
-  paid:{kick:"Founding reservation · $1.99", title:"Hold your founding seat", sub:"Ten seconds. First month free at launch. Refundable any time before it.", btn:"Hold my seat · $1.99"},
-  free:{kick:"Free list", title:"Join the list free", sub:"The launch letter, previews and first looks. Plus two member guides the moment you join: Well Paired and The Wedge.", btn:"Join free"},
-  upgrade:{kick:"One tap upgrade · $1.99", title:"You are in. Want the seat too?", sub:"$1.99 adds your first month free, a rate locked for life and your name on the Founding Wall. Refundable any time before launch.", btn:"Add my seat · $1.99"}
-};
-function openModal(m){
-  mode=m||"paid";
-  var c=modalCopy[mode]||modalCopy.paid;
-  document.getElementById("mForm").style.display="block";
-  document.getElementById("mSuccess").style.display="none";
-  document.getElementById("mKick").textContent = c.kick;
-  document.getElementById("mTitle").textContent = c.title;
-  document.getElementById("mSub").textContent = c.sub;
-  document.getElementById("mSubmit").textContent = c.btn;
-  var known="";
-  try{ known=localStorage.getItem("gr_email")||""; if(known && !document.getElementById("fEmail").value) document.getElementById("fEmail").value=known; }catch(e){}
-  /* upgrade = one tap: known email shown as a line, extras hidden until asked for */
-  var slim = (mode==="upgrade" && known);
-  document.getElementById("upLine").style.display = slim ? "block" : "none";
-  document.getElementById("upEmail").textContent = known;
-  ["fName","fEmail","fPhone"].forEach(function(id){ document.getElementById(id).style.display = slim ? "none" : "block"; });
-  document.getElementById("smsRow").style.display = slim ? "none" : "flex";
-  document.getElementById("ownRow").style.display = slim ? "none" : "flex";
-  document.getElementById("justLetterRow").style.display = (mode==="free") ? "none" : "block";
-  modalBack.classList.add("on");
-  document.getElementById("dock").classList.remove("on");
-  setTimeout(function(){ var f=document.getElementById("fName"); if(slim || document.getElementById("fEmail").value) f=document.getElementById("fAge"); f.focus(); },80);
-  grTrack("modal_open_"+mode);
-}
-document.getElementById("upChange").addEventListener("click", function(){
-  document.getElementById("upLine").style.display="none";
-  ["fName","fEmail","fPhone"].forEach(function(id){ document.getElementById(id).style.display="block"; });
-  document.getElementById("smsRow").style.display="flex";
-  document.getElementById("ownRow").style.display="flex";
-  document.getElementById("fEmail").focus();
-});
-function showSuccess(state){
-  var map={
-    wall:{badge:"Greenroom<br>Founding<br>Member", title:"You are on the wall.", note:"Payment received. Your founding seat is held, your first month is free at launch and your name goes on the wall. Confirmation is in your inbox."},
-    heldlist:{badge:"Greenroom<br>Founding<br>List", title:"You are on the founding list.", note:"Checkout for your $1.99 seat opens by email. Nothing is charged until you complete it. Your first month free unlocks when it does."},
-    free:{badge:"Greenroom<br>Day One", title:"Welcome to the room.", note:"You are on the list. Your two member guides are ready below and the launch letter lands in your inbox."}
-  };
-  var s=map[state]||map.free;
-  document.getElementById("badgeLbl").innerHTML=s.badge;
-  document.getElementById("successTitle").textContent=s.title;
-  document.getElementById("successNote").textContent=s.note;
-  document.getElementById("mForm").style.display="none";
-  document.getElementById("mSuccess").style.display="block";
-  var share=location.origin+location.pathname+"?ref="+refCode();
-  document.getElementById("shareLink").textContent=share;
-}
-var lastFocus=null;
-function closeModal(){ modalBack.classList.remove("on"); if(lastFocus){ lastFocus.focus(); lastFocus=null; } }
-document.getElementById("reserveBtn").addEventListener("click",function(){lastFocus=this;openModal("paid")});
-document.getElementById("freeJoin").addEventListener("click",function(){lastFocus=this;openModal("free")});
-document.getElementById("modalX").addEventListener("click",closeModal);
-modalBack.addEventListener("click",function(e){ if(e.target===modalBack) closeModal(); });
-document.addEventListener("keydown",function(e){
-  if(e.key==="Escape") closeModal();
-  if(e.key==="Tab" && modalBack.classList.contains("on")){
-    var f=modalBack.querySelectorAll("button,input,a[href]");
-    var list=Array.prototype.filter.call(f,function(n){return n.offsetParent!==null});
-    if(!list.length) return;
-    var first=list[0], last=list[list.length-1];
-    if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); }
-    else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); }
+let lastFocus=null;
+function openModal(id){
+  lastFocus=document.activeElement;
+  $$('.modal').forEach(m=>m.classList.remove('show'));
+  const m=$('#m-'+id); if(!m)return;
+  if(id==='shape')loadSurvey();
+  if(id==='guild'){
+    if(isPaid()){m.classList.add('show');document.body.style.overflow='hidden';
+      renderGuildDone(true,'You are already in the Guild. Both volumes are open below.');return;}
+    initCheckout();
   }
-});
-/* opener video */
-(function(){
-  var v=document.getElementById("openerVid"), b=document.getElementById("vidBtn");
-  if(!v||!b) return;
-  b.addEventListener("click",function(){
-    if(v.paused){ v.play(); b.style.display="none"; }
-  });
-  v.addEventListener("click",function(){ if(!v.paused){ v.pause(); b.style.display="block"; } });
-})();
-
-function refCode(){ try{ var c=localStorage.getItem("gr_ref"); if(!c){ c=Math.random().toString(36).slice(2,8).toUpperCase(); localStorage.setItem("gr_ref",c);} return c; }catch(e){ return "FRIEND"; } }
-
-function grUtm(){
-  try{ return JSON.parse(localStorage.getItem("gr_utm")||"{}"); }catch(e){ return {}; }
+  m.classList.add('show'); document.body.style.overflow='hidden';
+  const saved=localStorage.getItem('gr_email');
+  if(saved)m.querySelectorAll('input[type=email]').forEach(i=>{i.value=saved});
+  const f=m.querySelector('input:not([type=checkbox])');
+  if(f&&innerWidth>760)setTimeout(()=>f.focus(),150);
 }
-document.getElementById("justLetter").addEventListener("click", function(){
-  var email=document.getElementById("fEmail").value.trim();
-  document.getElementById("errEmail").classList.remove("on");
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
-    document.getElementById("fEmail").style.display="block";
-    document.getElementById("errEmail").classList.add("on"); document.getElementById("fEmail").focus(); return;
-  }
-  var lead={ kind:"reserve", mode:"free", name:document.getElementById("fName").value.trim(), email:email,
-    phone:"", smsConsent:false, ownershipInterest:false,
-    path:document.documentElement.getAttribute("data-path")||"none", ref:refCode(), utm:grUtm(), at:new Date().toISOString() };
-  try{ var L=JSON.parse(localStorage.getItem("gr_leads")||"[]"); L.push(lead); localStorage.setItem("gr_leads",JSON.stringify(L)); localStorage.setItem("gr_email",email); }catch(e){}
-  if(CONFIG.FORM_ENDPOINT){ try{ navigator.sendBeacon(CONFIG.FORM_ENDPOINT, new Blob([JSON.stringify(lead)],{type:"application/json"})); }catch(e2){} }
-  grTrack("lead_letter_downgrade");
-  showSuccess("free");
+function closeAll(){$$('.modal').forEach(m=>m.classList.remove('show'));document.body.style.overflow='';if(lastFocus)try{lastFocus.focus()}catch(_){}}
+function showStage(mod,name){$$(mod+' .stage').forEach(s=>s.classList.toggle('on',s.dataset.stage===name));}
+document.addEventListener('click',e=>{
+  const o=e.target.closest('[data-open]');
+  if(o){e.preventDefault();openModal(o.dataset.open);return;}
+  if(e.target.closest('[data-close]')||e.target.classList.contains('modal'))closeAll();
 });
-document.getElementById("mSubmit").addEventListener("click", function(){
-  var email=document.getElementById("fEmail").value.trim();
-  document.getElementById("errEmail").classList.remove("on");
-  document.getElementById("errAge").classList.remove("on");
-  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ document.getElementById("fEmail").style.display="block"; document.getElementById("upLine").style.display="none"; document.getElementById("errEmail").classList.add("on"); document.getElementById("fEmail").focus(); return; }
-  if(!document.getElementById("fAge").checked){ document.getElementById("errAge").classList.add("on"); document.getElementById("fAge").focus(); return; }
-  var paid = (mode==="paid"||mode==="upgrade");
-  var lead={ kind:"reserve", mode:mode, name:document.getElementById("fName").value.trim(), email:email,
-    phone:document.getElementById("fPhone").value.trim(), smsConsent:document.getElementById("fSms").checked,
-    ownershipInterest:document.getElementById("fOwn").checked,
-    path:document.documentElement.getAttribute("data-path")||"none", ref:refCode(), utm:grUtm(), at:new Date().toISOString() };
-  try{ var L=JSON.parse(localStorage.getItem("gr_leads")||"[]"); L.push(lead); localStorage.setItem("gr_leads",JSON.stringify(L)); localStorage.setItem("gr_email",email); }catch(e){}
-  if(CONFIG.FORM_ENDPOINT){
-    try{ navigator.sendBeacon(CONFIG.FORM_ENDPOINT, new Blob([JSON.stringify(lead)],{type:"application/json"})); }catch(e){}
+addEventListener('keydown',e=>{if(e.key==='Escape')closeAll();});
+
+async function send(kind,data){
+  data.kind=kind;data.ts=new Date().toISOString();data.page=location.href;
+  data.ref=new URLSearchParams(location.search).get('ref')||'';
+  try{if(CFG.FORM_ENDPOINT)await fetch(CFG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});}catch(_){}
+  try{const l=JSON.parse(localStorage.getItem('gr_leads')||'[]');l.push(data);localStorage.setItem('gr_leads',JSON.stringify(l));
+    if(data.email)localStorage.setItem('gr_email',data.email);}catch(_){}
+  if(window.dataLayer)dataLayer.push({event:'gr_lead',kind});
+}
+const joined=()=>sessionStorage.setItem('gr_joined','1');
+const isPaid=()=>localStorage.getItem('gr_paid')==='1';
+function markPaid(){localStorage.setItem('gr_paid','1');}
+/* Books are shown ONLY on a confirmed payment. Everything else sees the pending note. */
+function renderGuildDone(paid,msg){
+  const b=$('#booksBlock'),pend=$('#pendingBlock');
+  if(b)b.hidden=!paid;
+  if(pend)pend.hidden=paid;
+  if(msg)$('#guildMsg').textContent=msg;
+  showStage('#m-guild','done');
+}
+
+let stripe=null,elements=null,checkoutReady=false,payMode='none';
+
+/* Payment chain, best first. Whichever value is filled in CFG decides the mode. */
+async function initCheckout(){
+  if(checkoutReady)return; checkoutReady=true;
+  const card=$('#cardMount'),orDiv=$('#orDiv'),btn=$('#payBtn'),form=$('form[data-form=card]');
+  const hide=el=>{if(el)el.style.display='none'};
+  const setBtn=t=>{if(btn)btn.textContent=t};
+  const swap=html=>{if(card&&card.parentNode)card.outerHTML=html;};
+  const note=t=>{const n=$('#opNote');if(n)n.textContent=t;};
+
+  /* A. inline wallets + card. Needs a server for the PaymentIntent. Best conversion. */
+  if(CFG.STRIPE_PK&&CFG.INTENT_URL&&window.Stripe){
+    try{
+      stripe=Stripe(CFG.STRIPE_PK);
+      const r=await fetch(CFG.INTENT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({amount:199,currency:'usd'})});
+      const {clientSecret}=await r.json();
+      if(!clientSecret)throw new Error('no client secret');
+      elements=stripe.elements({clientSecret,appearance:{theme:'night',variables:{colorPrimary:'#3fd06a',colorBackground:'#0d1f16',borderRadius:'12px'}}});
+      const ece=elements.create('expressCheckout');ece.mount('#expressMount');
+      ece.on('confirm',async()=>{
+        const {error}=await stripe.confirmPayment({elements,redirect:'if_required'});
+        if(error){$('#cardErr').textContent=error.message||'That payment did not go through.';return;}
+        await settle(localStorage.getItem('gr_email')||'');
+      });
+      if(card)card.innerHTML='';
+      elements.create('payment',{defaultValues:{billingDetails:{email:localStorage.getItem('gr_email')||''}}}).mount('#cardMount');
+      payMode='element'; altRails(); return;
+    }catch(err){/* fall through */}
   }
-  grTrack("lead_"+mode, {own:lead.ownershipInterest});
-  if(paid && CONFIG.STRIPE_LINK){
-    location.href = CONFIG.STRIPE_LINK + (CONFIG.STRIPE_LINK.indexOf("?")>-1?"&":"?") + "prefilled_email="+encodeURIComponent(email) + "&client_reference_id="+encodeURIComponent(refCode());
+
+  /* B. Stripe Buy Button. No server. Real card fields, wallets included. */
+  if(CFG.STRIPE_PK&&CFG.STRIPE_BUY_BUTTON_ID){
+    if(!document.querySelector('script[src*="buy-button"]')){
+      const sc=document.createElement('script');sc.async=true;
+      sc.src='https://js.stripe.com/v3/buy-button.js';document.head.appendChild(sc);
+    }
+    const mount=$('#buyBtnMount'); if(!mount)return;
+    mount.innerHTML='';
+    const bb=document.createElement('stripe-buy-button');
+    bb.setAttribute('buy-button-id',CFG.STRIPE_BUY_BUTTON_ID);
+    bb.setAttribute('publishable-key',CFG.STRIPE_PK);
+    const em=localStorage.getItem('gr_email')||'';if(em)bb.setAttribute('customer-email',em);
+    mount.appendChild(bb);
+    hide(form);hide(orDiv);
+    payMode='buybutton'; altRails(); return;
+  }
+
+  /* C. Stripe Payment Link. No server. One field here, then Stripe's own page. */
+  if(CFG.STRIPE_LINK){
+    note('Your card is entered on Stripe\'s secure page, which opens in one tap. Apple Pay, Google Pay, Link and all major cards are accepted there.');
+    hide(orDiv); setBtn('Continue to secure checkout');
+    payMode='link'; altRails(); return;
+  }
+
+  /* D. nothing configured yet: hold the buyer, never pretend to charge them. */
+  note('Secure card fields switch on the moment payment goes live. Reserve now and your founding rate and both volumes are held for you.');
+  hide(orDiv); setBtn('Hold my founding rate');
+  payMode='none'; altRails();
+}
+function altRails(){
+  const w=$('#altPay');if(!w)return;let h='';
+  if(CFG.PAYPAL_LINK)h+='<a href="'+CFG.PAYPAL_LINK+'" target="_blank" rel="noopener" data-alt="paypal"><span class="chip pp">PayPal</span> Pay with PayPal</a>';
+  if(CFG.CRYPTO_LINK)h+='<a href="'+CFG.CRYPTO_LINK+'" target="_blank" rel="noopener" data-alt="crypto">Pay with crypto · USDC, ETH, BTC</a>';
+  w.innerHTML=h;
+  w.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    send('guild',{email:localStorage.getItem('gr_email')||'',method:a.dataset.alt});
+  }));
+}
+async function settle(email){
+  await send('paid',{email,amount:'1.99',method:payMode});
+  joined(); markPaid();
+  renderGuildDone(true,'Payment received. Founding rate held for life. Both volumes are open below.');
+}
+
+$$('form[data-form]').forEach(f=>f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const kind=f.dataset.form,data=Object.fromEntries(new FormData(f).entries());
+  const btn=e.submitter||f.querySelector('button[type=submit]');
+  const label=btn?btn.innerHTML:'';if(btn)btn.disabled=true;
+
+  if(kind==='door'){
+    if((data.code||'').trim().toUpperCase()===CFG.PREVIEW_CODE.toUpperCase()){
+      $('#doorErr').textContent='';closeAll();window.open(CFG.PREVIEW_URL,'_blank','noopener');
+    }else $('#doorErr').textContent='That code does not open this door.';
+    if(btn)btn.disabled=false;return;
+  }
+
+  if(kind==='seat'){
+    await send('seat',data);
+    if(btn){btn.disabled=false;btn.innerHTML=label;}
+    const c=$('#captureCard');if(c)c.classList.add('ok');
+    joined();
+    const inline=f.closest('#captureCard');
+    if(inline){closeAll();}
+    else{openModal('seat');showStage('#m-seat','done');}
     return;
   }
-  showSuccess(paid ? "heldlist" : "free");
+
+  if(kind==='card'){
+    $('#cardErr').textContent='';
+    const email=(data.email||localStorage.getItem('gr_email')||'').trim();
+    if(email)localStorage.setItem('gr_email',email);
+    await send('guild',{email,method:payMode});
+
+    if(payMode==='element'&&stripe&&elements){
+      const {error}=await stripe.confirmPayment({elements,confirmParams:{receipt_email:email},redirect:'if_required'});
+      if(error){$('#cardErr').textContent=error.message||'That card was declined.';if(btn){btn.disabled=false;btn.innerHTML=label;}return;}
+      await settle(email);
+    }else if(payMode==='link'){
+      let href=CFG.STRIPE_LINK;
+      try{const u=new URL(href);if(email){u.searchParams.set('prefilled_email',email);
+        u.searchParams.set('client_reference_id',btoa(email).replace(/=/g,'').slice(0,40));}href=u.toString();}catch(_){}
+      window.open(href,'_blank','noopener');
+      joined();
+      renderGuildDone(isPaid(),'Finish the $1.99 payment in the tab that just opened.');
+    }else{
+      joined();
+      renderGuildDone(isPaid(),'Your Guild place is held at the founding rate.');
+    }
+    if(btn){btn.disabled=false;btn.innerHTML=label;}
+  }
+}));
+
+const shareText='The Greenroom opens November 25. Free to watch, and $1.99 holds the founding rate for life:';
+$$('[data-share]').forEach(b=>b.addEventListener('click',async e=>{e.preventDefault();
+  if(navigator.share){try{await navigator.share({title:'Greenroom TV',text:shareText,url:CFG.SITE});}catch(_){}}
+  else{try{await navigator.clipboard.writeText(shareText+' '+CFG.SITE);const o=b.textContent;b.textContent='Link copied';setTimeout(()=>b.textContent=o,1600);}catch(_){}}
+}));
+
+function surveyURL(){
+  let base=(CFG.JOTFORM_URL||'').trim();
+  if(!base && CFG.JOTFORM_ID) base='https://form.jotform.com/'+String(CFG.JOTFORM_ID).trim();
+  if(!base) base=(CFG.SURVEY_FALLBACK||'').trim();
+  if(!base) return '';
+  const q=new URLSearchParams();
+  const em=localStorage.getItem('gr_email')||''; if(em)q.set('email',em);
+  q.set('source','launch-site');
+  const ref=new URLSearchParams(location.search).get('ref')||''; if(ref)q.set('ref',ref);
+  return base+(base.indexOf('?')>-1?'&':'?')+q.toString();
+}
+function loadSurvey(){
+  const f=$('#surveyFrame'), url=surveyURL(), out=$('#surveyOut');
+  if(!url){
+    $('#surveyHolder').innerHTML='<p class="small">Shape the Room opens shortly. Paste your Jotform link into CFG.JOTFORM_URL (or the form id into CFG.JOTFORM_ID) at the bottom of index.html and this becomes the live survey.</p>';
+    if(out)out.style.display='none';
+    return;
+  }
+  if(out){out.href=url;out.style.display='';}
+  if(f.dataset.loaded)return;
+  f.src=url; f.dataset.loaded='1';
+  // if the embed is blocked, the direct link is already on screen
+  f.addEventListener('error',()=>{$('#surveyHolder').innerHTML='<p class="small">The survey opens in a new tab. Use the button below.</p>';});
+  send('survey_open',{email:localStorage.getItem('gr_email')||''});
+}
+addEventListener('message',e=>{
+  if(typeof e.data!=='string'||!/jotform/i.test(e.origin))return;
+  if(/submission-completed|submitCompleted/i.test(e.data)){
+    sessionStorage.setItem('gr_survey_done','1');
+    send('survey_submit',{email:localStorage.getItem('gr_email')||'',form:CFG.JOTFORM_ID});
+    const h=$('#surveyHolder');
+    if(h)setTimeout(()=>{h.innerHTML='<div style="padding:2rem 1rem;text-align:center"><h3 style="text-transform:uppercase">Heard. <span class="g">Thank you.</span></h3><p class="sub" style="margin-top:.5rem">Your answers go straight to the programming board.</p></div>';},1200);
+  }
+  const m=/([0-9]+):([0-9]+)/.exec(e.data);
+  if(m&&e.data.indexOf('setHeight')>-1){const fr=$('#surveyFrame');if(fr)fr.style.height=Math.min(parseInt(m[1],10)||620,760)+'px';}
 });
-/* Stripe return: success_url should point at index.html?paid=1 */
+const surveyEl=$('#survey');
+function showSurvey(){if(sessionStorage.getItem('gr_survey')||sessionStorage.getItem('gr_survey_done'))return;surveyEl.hidden=false;requestAnimationFrame(()=>surveyEl.classList.add('on'));}
+$$('[data-survey-no]').forEach(b=>b.addEventListener('click',()=>{surveyEl.classList.remove('on');sessionStorage.setItem('gr_survey','1');}));
+document.addEventListener('click',e=>{if(e.target.closest('[data-open="shape"]')){surveyEl.classList.remove('on');sessionStorage.setItem('gr_survey','1');}});
+setTimeout(showSurvey,26000);
+
+const CG={
+  start:{msg:"Evening. The doors open on 25 November. The Guild is $1.99 once and opens both books today. Shall I take you straight to it?",
+    qr:[["Yes, take me to checkout","open-guild"],["What do I actually get?","what"],["Just the free seat","seat"]]},
+  what:{msg:"A free seat gets you the free tier on day one and the newsletter. The Guild is a one time $1.99 that opens both publications immediately and holds your founding rate for life.",
+    qr:[["Take me to checkout","open-guild"],["Who is on the guest list?","who"],["Just the free seat","seat"]]},
+  guild:{msg:"$1.99, once. Both books release the moment it clears and your rate never rises. Members also get a vote on what we greenlight and first seats when a Greenroom film reaches theatres. Refundable any time before launch.",
+    qr:[["Take me to checkout","open-guild"],["Just the free seat","seat"]]},
+  who:{msg:"Seventeen names are signed and sealed. They open one at a time as the clock runs down, and Guild members see every one of them first.",
+    qr:[["Take me to checkout","open-guild"],["Just the free seat","seat"]]}
+};
+const cg=$('#cg'),cgBody=$('#cgBody'),cgQr=$('#cgQr');
+function cgSay(t,who='bot'){const d=document.createElement('div');d.className='msg '+who;d.textContent=t;cgBody.appendChild(d);cgBody.scrollTop=cgBody.scrollHeight;}
+function cgNode(key){
+  const n=CG[key];if(!n)return;
+  setTimeout(()=>{cgSay(n.msg);cgQr.innerHTML='';
+    n.qr.forEach(([label,to])=>addQr(label,to));
+  },320);
+}
+function cgReentry(){
+  // never leave the concierge on a dead end after it hands someone to checkout
+  cgQr.innerHTML='';
+  if(isPaid()){ cgSay("You're in the Guild. Both volumes are open in your confirmation, and I can point you at the survey next.");
+    [["Open my books","open-guild"],["Take the survey","shape"]].forEach(([l,to])=>addQr(l,to)); return; }
+  cgSay("Still here whenever you need me. Want to pick up where we left off?");
+  [["Back to checkout","open-guild"],["Just the free seat","seat"],["What do I get again?","what"]].forEach(([l,to])=>addQr(l,to));
+}
+function addQr(label,to){
+  const b=document.createElement('button'); b.textContent=label;
+  b.onclick=()=>{cgSay(label,'me');cgQr.innerHTML='';
+    if(to==='seat'){cg.classList.remove('on');openModal('seat');setTimeout(cgReentry,400);}
+    else if(to==='open-guild'){cg.classList.remove('on');openModal('guild');setTimeout(cgReentry,400);}
+    else if(to==='shape'){cg.classList.remove('on');openModal('shape');setTimeout(cgReentry,400);}
+    else cgNode(to);};
+  cgQr.appendChild(b);
+}
+$('#cgLaunch').addEventListener('click',()=>{
+  cg.classList.add('on');$('#cgLaunch').classList.remove('on');
+  if(!cgBody.dataset.init){cgBody.dataset.init='1';cgNode('start');}
+  else if(!cgQr.children.length){cgReentry();}
+});
+$('#cgClose').addEventListener('click',()=>{cg.classList.remove('on');$('#cgLaunch').classList.add('on');});
+
+let emailShown=0;
+setInterval(()=>{
+  if(sessionStorage.getItem('gr_joined')||emailShown>=CFG.EMAIL_POPUP_MAX)return;
+  if($$('.modal.show').length||surveyEl.classList.contains('on')||cg.classList.contains('on'))return;
+  emailShown++;openModal('email');
+},CFG.EMAIL_POPUP_SECONDS*1000);
+
+/* Stripe payment link / buy button success url should be  https://thegreenroomnetwork.com/?paid=1  */
 (function(){
-  if(new URLSearchParams(location.search).get("paid")==="1"){
-    grTrack("paid_return");
-    openModal("paid");
-    showSuccess("wall");
+  const q=new URLSearchParams(location.search);
+  if(q.get('paid')==='1'){
+    markPaid();joined();
+    send('paid',{email:localStorage.getItem('gr_email')||'',amount:'1.99',method:'return'});
+    setTimeout(()=>{openModal('guild');renderGuildDone(true,'Payment confirmed. Founding rate held for life. Both volumes are open below.');},400);
   }
 })();
-/* direct checkout hash: any #reserve link opens the modal with the stored email prefilled */
-document.querySelectorAll('a[href="#reserve"]').forEach(function(a){
-  a.addEventListener("click", function(e){ e.preventDefault(); lastFocus=a; openModal("paid"); });
+
+let nudged=false;
+document.addEventListener('mouseout',e=>{
+  if(nudged||sessionStorage.getItem('gr_joined')||e.relatedTarget||e.clientY>0)return;
+  if($$('.modal.show').length)return;
+  nudged=true;openModal('exit');
 });
-if(location.hash==="#reserve"){ setTimeout(function(){ openModal("paid"); }, 300); }
-/* hero one field capture: email alone is a complete win, seat offered after */
-(function(){
-  var form=document.getElementById("heroCap");
-  if(!form) return;
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-    var em=document.getElementById("heroEmail").value.trim();
-    document.getElementById("heroErr").classList.remove("on");
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ document.getElementById("heroErr").classList.add("on"); document.getElementById("heroEmail").focus(); return; }
-    var lead={ kind:"hero", mode:"free", email:em, path:document.documentElement.getAttribute("data-path")||"none", ref:refCode(), utm:grUtm(), at:new Date().toISOString() };
-    try{ var L=JSON.parse(localStorage.getItem("gr_leads")||"[]"); L.push(lead); localStorage.setItem("gr_leads",JSON.stringify(L)); localStorage.setItem("gr_email",em); }catch(e2){}
-    if(CONFIG.FORM_ENDPOINT){ try{ navigator.sendBeacon(CONFIG.FORM_ENDPOINT, new Blob([JSON.stringify(lead)],{type:"application/json"})); }catch(e3){} }
-    grTrack("lead_hero");
-    form.querySelector("button").textContent="You are in";
-    document.getElementById("heroEmail").disabled=true;
-    openModal("upgrade");
-  });
-})();
-document.getElementById("shareBtn").addEventListener("click", function(){
-  var url=location.origin+location.pathname+"?ref="+refCode();
-  var data={title:"The Greenroom Network",text:"Doors open Winter 2026. Hold a founding seat with me.",url:url};
-  if(navigator.share){ navigator.share(data).catch(function(){}); }
-  else{ navigator.clipboard && navigator.clipboard.writeText(url); this.textContent="Link copied"; }
-});
-
-/* cinematic depth hero: pointer-driven 3d parallax */
-(function(){
-  if(reduced || matchMedia("(pointer:coarse)").matches) return;
-  var gate=document.getElementById("gate"), depth=document.getElementById("depth");
-  if(!gate||!depth) return;
-  var far=depth.querySelector(".far"), aur=depth.querySelector(".aurora"),
-      mid=depth.querySelector(".mid"), near=depth.querySelector(".near");
-  var mx=0,my=0,cx=0,cy=0,raf=null;
-  function frame(){
-    cx+=(mx-cx)*.06; cy+=(my-cy)*.06;
-    far.style.transform="translate3d("+(cx*-16)+"px,"+(cy*-10)+"px,0) scale(1.06)";
-    aur.style.transform="translate(-50%,-50%) translate3d("+(cx*-7)+"px,"+(cy*-5)+"px,0)";
-    mid.style.transform="translate3d("+(cx*12)+"px,"+(cy*8)+"px,0)";
-    near.style.transform="translate3d("+(cx*26)+"px,"+(cy*16)+"px,0)";
-    if(Math.abs(mx-cx)>.001||Math.abs(my-cy)>.001) raf=requestAnimationFrame(frame); else raf=null;
-  }
-  gate.addEventListener("pointermove", function(e){
-    var r=gate.getBoundingClientRect();
-    mx=((e.clientX-r.left)/r.width-.5)*2; my=((e.clientY-r.top)/r.height-.5)*2;
-    if(!raf) raf=requestAnimationFrame(frame);
-  });
-  gate.addEventListener("pointerleave", function(){ mx=0;my=0; if(!raf) raf=requestAnimationFrame(frame); });
-})();
-
-/* 2027 layer: scroll reveals, plate parallax and tilt (desktop, motion permitting) */
-(function(){
-  var targets=[".doorgrid",".world",".found-grid",".sessions",".slate-strip",".faq-list",".credit-tile","#closer .big","#closer .trio"];
-  var els=[];
-  targets.forEach(function(sel){ document.querySelectorAll(sel).forEach(function(n){ n.classList.add("rv-up"); els.push(n); }); });
-  if(reduced || !("IntersectionObserver" in window)){ els.forEach(function(n){n.classList.add("in")}); }
-  else{
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
-    },{threshold:.12,rootMargin:"0px 0px -40px 0px"});
-    els.forEach(function(n){ io.observe(n); });
-  }
-  if(reduced || matchMedia("(pointer:coarse)").matches) return;
-  document.querySelectorAll(".plate").forEach(function(p){
-    p.addEventListener("mousemove", function(e){
-      var r=p.getBoundingClientRect();
-      var rx=((e.clientY-r.top)/r.height-.5)*-4, ry=((e.clientX-r.left)/r.width-.5)*4;
-      p.style.transform="perspective(900px) rotateX("+rx.toFixed(2)+"deg) rotateY("+ry.toFixed(2)+"deg)";
-    });
-    p.addEventListener("mouseleave", function(){ p.style.transform=""; });
-  });
-  var plates=Array.prototype.slice.call(document.querySelectorAll(".plate img"));
-  addEventListener("scroll", function(){
-    plates.forEach(function(img){
-      var r=img.getBoundingClientRect();
-      if(r.bottom<0||r.top>innerHeight) return;
-      var t=((r.top+r.height/2)-innerHeight/2)/innerHeight;
-      img.style.transform="translateY("+(t*-14).toFixed(1)+"px) scale(1.06)";
-    });
-  },{passive:true});
-})();
-
-/* survey side box: appears once per session after a short settle */
-(function(){
-  var box=document.getElementById("vibebox");
-  try{ if(sessionStorage.getItem("gr_vibebox")==="1") return; }catch(e){}
-  var shown=false;
-  function pop(){ if(shown) return; shown=true; box.classList.add("on"); grTrack("vibebox_show"); try{ sessionStorage.setItem("gr_vibebox","1"); }catch(e){} }
-  setTimeout(pop, 9000);
-  addEventListener("scroll", function once(){ if(scrollY>1200){ pop(); removeEventListener("scroll", once); } }, {passive:true});
-  document.getElementById("vibeX").addEventListener("click", function(){ box.classList.remove("on"); });
-  box.querySelector("a.go").addEventListener("click", function(){ box.classList.remove("on"); });
-})();
-
-/* exit intent nudge, desktop, once */
-(function(){
-  if (matchMedia("(pointer:coarse)").matches) return;
-  var shown=false;
-  try{ shown = sessionStorage.getItem("gr_nudged")==="1" || (JSON.parse(localStorage.getItem("gr_leads")||"[]").length>0); }catch(e){}
-  document.addEventListener("mouseout", function(e){
-    if(shown || e.clientY>8 || e.relatedTarget) return;
-    shown=true; try{ sessionStorage.setItem("gr_nudged","1"); }catch(err){}
-    document.getElementById("nudge").classList.add("on"); grTrack("nudge_show");
-  });
-  document.getElementById("nudgeGo").addEventListener("click",function(){
-    var em=document.getElementById("nudgeEmail").value.trim();
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){ document.getElementById("nudgeEmail").focus(); return; }
-    var lead={ kind:"nudge", mode:"free", email:em, path:document.documentElement.getAttribute("data-path")||"none", ref:refCode(), utm:grUtm(), at:new Date().toISOString() };
-    try{ var L=JSON.parse(localStorage.getItem("gr_leads")||"[]"); L.push(lead); localStorage.setItem("gr_leads",JSON.stringify(L)); localStorage.setItem("gr_email",em); }catch(e2){}
-    if(CONFIG.FORM_ENDPOINT){ try{ navigator.sendBeacon(CONFIG.FORM_ENDPOINT, new Blob([JSON.stringify(lead)],{type:"application/json"})); }catch(e3){} }
-    grTrack("lead_nudge");
-    document.getElementById("nudgeMsg").innerHTML="<b>The letter is on the way.</b>";
-    document.getElementById("nudgeEmail").style.display="none"; this.style.display="none";
-    setTimeout(function(){ document.getElementById("nudge").classList.remove("on"); },1800);
-  });
-  document.getElementById("nudgeSeat").addEventListener("click",function(){ document.getElementById("nudge").classList.remove("on"); });
-  document.getElementById("nudgeX").addEventListener("click",function(){ document.getElementById("nudge").classList.remove("on"); });
-})();
 </script>
 </body>
 </html>
